@@ -1,4 +1,4 @@
-## snippet.3801.fs
+### [snippet.3801.fs](snippet.3801.fs)
 ```
 let makeList _ = [ for i in 1 .. 100 -> i * i ]
 // The arguments 100 and 200 are ignored.
@@ -6,7 +6,7 @@ let list1 = makeList 100
 let list2 = makeList 200
 ```
 
-## snippet.3802.fs
+### [snippet.3802.fs](snippet.3802.fs)
 ```
 [<EntryPoint>]
 let main _ =
@@ -14,7 +14,7 @@ let main _ =
     0
 ```
 
-## snippet.3803.fs
+### [snippet.3803.fs](snippet.3803.fs)
 ```
 type Slice = Slice of int * int * string
 
@@ -26,22 +26,22 @@ let substring = GetSubstring1 (Slice(0, 4, "Et tu, Brute?"))
 printfn "Substring: %s" substring
 ```
 
-## snippet.3804.fs
+### [snippet.3804.fs](snippet.3804.fs)
 ```
 let isNil = function [] -> true | _::_ -> false
 ```
 
-## snippet.3805.fs
+### [snippet.3805.fs](snippet.3805.fs)
 ```
 let GetSubstring2 (Slice(p0, p1, text) as s) = s
 ```
 
-## snippet.3806.fs
+### [snippet.3806.fs](snippet.3806.fs)
 ```
 let sum [a; b; c;] = a + b + c
 ```
 
-## snippet.3807.fs
+### [snippet.3807.fs](snippet.3807.fs)
 ```
 type SpeedingTicket() =
     member this.GetMPHOver(speed: int, limit: int) = speed - limit
@@ -54,7 +54,7 @@ let ticket1 : SpeedingTicket = SpeedingTicket()
 printfn "%f" (CalculateFine ticket1)
 ```
 
-## snippet.3808.fs
+### [snippet.3808.fs](snippet.3808.fs)
 ```
 type DuplexType =
     | Full
@@ -80,7 +80,7 @@ let optionalDuplexValue : option<DuplexType> = Some(Half)
 let conn6 = Connection(?duplex0 = optionalDuplexValue)
 ```
 
-## snippet.3809.fs
+### [snippet.3809.fs](snippet.3809.fs)
 ```
 type Incrementor(z) =
     member this.Increment(i : int byref) =
@@ -104,7 +104,7 @@ incrementor.Increment(refInt)
 printfn "%d" !refInt
 ```
 
-## snippet.3810.fs
+### [snippet.3810.fs](snippet.3810.fs)
 ```
 // TryParse has a second parameter that is an out parameter
 // of type System.DateTime.

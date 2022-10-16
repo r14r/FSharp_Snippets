@@ -1,4 +1,4 @@
-## snippet.0101.fs
+### [snippet.0101.fs](snippet.0101.fs)
 ```
 let list1 = [ 1; 2; 3]
 // Error: duplicate definition.
@@ -9,7 +9,7 @@ let function1 () =
    list1
 ```
 
-## snippet.0102.fs
+### [snippet.0102.fs](snippet.0102.fs)
 ```
 let list1 = [ 1; 2; 3]
 let sumPlus x =
@@ -18,7 +18,7 @@ let sumPlus x =
    x + List.sum list1
 ```
 
-## snippet.0103.fs
+### [snippet.0103.fs](snippet.0103.fs)
 ```
 let cylinderVolume radius length =
     // Define a local value pi.
@@ -26,7 +26,7 @@ let cylinderVolume radius length =
     length * pi * radius * radius
 ```
 
-## snippet.0105.fs
+### [snippet.0105.fs](snippet.0105.fs)
 ```
 let cylinderVolume radius length : float =
    // Define a local value pi.
@@ -34,7 +34,7 @@ let cylinderVolume radius length : float =
    length * pi * radius * radius
 ```
 
-## snippet.0106.fs
+### [snippet.0106.fs](snippet.0106.fs)
 ```
 let smallPipeRadius = 2.0
 let bigPipeRadius = 3.0
@@ -46,7 +46,7 @@ let smallPipeVolume = cylinderVolume smallPipeRadius
 let bigPipeVolume = cylinderVolume bigPipeRadius
 ```
 
-## snippet.0107.fs
+### [snippet.0107.fs](snippet.0107.fs)
 ```
 let length1 = 30.0
 let length2 = 40.0
@@ -56,24 +56,24 @@ let bigPipeVol1 = bigPipeVolume length1
 let bigPipeVol2 = bigPipeVolume length2
 ```
 
-## snippet.0108.fs
+### [snippet.0108.fs](snippet.0108.fs)
 ```
 let rec fib n = if n < 2 then 1 else fib (n - 1) + fib (n - 2)
 ```
 
-## snippet.0109.fs
+### [snippet.0109.fs](snippet.0109.fs)
 ```
 let apply1 (transform : int -> int ) y = transform y
 ```
 
-## snippet.0110.fs
+### [snippet.0110.fs](snippet.0110.fs)
 ```
 let increment x = x + 1
 
 let result1 = apply1 increment 100
 ```
 
-## snippet.0111.fs
+### [snippet.0111.fs](snippet.0111.fs)
 ```
 let apply2 ( f: int -> int -> int) x y = f x y
 
@@ -82,14 +82,14 @@ let mul x y = x * y
 let result2 = apply2 mul 10 20
 ```
 
-## snippet.0112.fs
+### [snippet.0112.fs](snippet.0112.fs)
 ```
 let result3 = apply1 (fun x -> x + 1) 100
 
 let result4 = apply2 (fun x y -> x * y ) 10 20
 ```
 
-## snippet.0113.fs
+### [snippet.0113.fs](snippet.0113.fs)
 ```
 let function1 x = x + 1
 let function2 x = x * 2
@@ -97,12 +97,12 @@ let h = function1 >> function2
 let result5 = h 100
 ```
 
-## snippet.0114.fs
+### [snippet.0114.fs](snippet.0114.fs)
 ```
 let result6 = 100 |> function1 |> function2
 ```
 
-## snippet.0201.fs
+### [snippet.0201.fs](snippet.0201.fs)
 ```
 open System
 open System.Windows.Forms
@@ -115,7 +115,7 @@ do
    Application.Run(form1)
 ```
 
-## snippet.0301.fs
+### [snippet.0301.fs](snippet.0301.fs)
 ```
 fun x -> x + 1
 fun a b c -> printfn "%A %A %A" a b c
@@ -123,13 +123,13 @@ fun (a: int) (b: int) (c: int) -> a + b * c
 fun x y -> let swap (a, b) = (b, a) in swap (x, y)
 ```
 
-## snippet.0302.fs
+### [snippet.0302.fs](snippet.0302.fs)
 ```
 let list = List.map (fun i -> i + 1) [1;2;3]
 printfn "%A" list
 ```
 
-## snippet.0601.fs
+### [snippet.0601.fs](snippet.0601.fs)
 ```
 let a = 1
 let b = 100u
@@ -140,13 +140,13 @@ let str = "text"
 let f x = x + 1
 ```
 
-## snippet.0602.fs
+### [snippet.0602.fs](snippet.0602.fs)
 ```
 let mutable x = 1
 x <- x + 1
 ```
 
-## snippet.0701.fs
+### [snippet.0701.fs](snippet.0701.fs)
 ```
 open System
 
@@ -159,7 +159,7 @@ let ParseDateTime (str: string) =
         None
 ```
 
-## snippet.0702.fs
+### [snippet.0702.fs](snippet.0702.fs)
 ```
 // Open a file and create a stream reader.
 let fileStream1 =
@@ -186,19 +186,19 @@ let ProcessNextLine nextLine =
 while ProcessNextLine (streamReader.ReadLine()) do ()
 ```
 
-## snippet.0703.fs
+### [snippet.0703.fs](snippet.0703.fs)
 ```
 match box value with
 | null -> printf "The value is null."
 | _ -> printf "The value is not null."
 ```
 
-## snippet.0801.fs
+### [snippet.0801.fs](snippet.0801.fs)
 ```
 let f a b = a + b + 100
 ```
 
-## snippet.0802.fs
+### [snippet.0802.fs](snippet.0802.fs)
 ```
 // Type annotations on a parameter.
 let addu1 (x : uint32) y =
@@ -209,18 +209,18 @@ let addu2 x y =
     (x : uint32) + y
 ```
 
-## snippet.0803.fs
+### [snippet.0803.fs](snippet.0803.fs)
 ```
 let addu1 x y : uint32 =
     x + y
 ```
 
-## snippet.0804.fs
+### [snippet.0804.fs](snippet.0804.fs)
 ```
 let makeTuple a b = (a, b)
 ```
 
-## snippet.0901.fs
+### [snippet.0901.fs](snippet.0901.fs)
 ```
 let function1 x y = x + y
 // The next line results in a compiler warning.
@@ -233,7 +233,7 @@ let result = function1 10 20
 function1 10 20 |> ignore
 ```
 
-## snippet.1001.fs
+### [snippet.1001.fs](snippet.1001.fs)
 ```
 let str1 = "abc
 def"
@@ -241,18 +241,18 @@ let str2 = "abc\
 def"
 ```
 
-## snippet.1002.fs
+### [snippet.1002.fs](snippet.1002.fs)
 ```
 printfn "%c" str1[1]
 ```
 
-## snippet.1003.fs
+### [snippet.1003.fs](snippet.1003.fs)
 ```
 printfn "%s" str1[0..2]
 printfn "%s" str2[3..5]
 ```
 
-## snippet.1004.fs
+### [snippet.1004.fs](snippet.1004.fs)
 ```
 // "abc" interpreted as a Unicode string.
 let str1 : string = "abc"
@@ -260,35 +260,35 @@ let str1 : string = "abc"
 let bytearray : byte[] = "abc"B
 ```
 
-## snippet.1005.fs
+### [snippet.1005.fs](snippet.1005.fs)
 ```
 let printChar (str : string) (index : int) =
     printfn "First character: %c" (str.Chars(index))
 ```
 
-## snippet.1006.fs
+### [snippet.1006.fs](snippet.1006.fs)
 ```
 let string1 = "Hello, " + "world"
 ```
 
-## snippet.1101.fs
+### [snippet.1101.fs](snippet.1101.fs)
 ```
 let i = 1
 ```
 
-## snippet.1102.fs
+### [snippet.1102.fs](snippet.1102.fs)
 ```
 let someVeryLongIdentifier =
     // Note indentation below.
     3 * 4 + 5 * 6
 ```
 
-## snippet.1103.fs
+### [snippet.1103.fs](snippet.1103.fs)
 ```
 let i, j, k = (1, 2, 3)
 ```
 
-## snippet.1104.fs
+### [snippet.1104.fs](snippet.1104.fs)
 ```
 let result =
 
@@ -298,7 +298,7 @@ let result =
     i + 2*j + 3*k
 ```
 
-## snippet.1105.fs
+### [snippet.1105.fs](snippet.1105.fs)
 ```
 // Error:
 printfn "%d" x
@@ -307,30 +307,30 @@ let x = 100
 printfn "%d" x
 ```
 
-## snippet.1106.fs
+### [snippet.1106.fs](snippet.1106.fs)
 ```
 let function1 a =
     a + 1
 ```
 
-## snippet.1107.fs
+### [snippet.1107.fs](snippet.1107.fs)
 ```
 let function2 (a, b) = a + b
 ```
 
-## snippet.1108.fs
+### [snippet.1108.fs](snippet.1108.fs)
 ```
 let function1 (a: int) : int = a + 1
 ```
 
-## snippet.1109.fs
+### [snippet.1109.fs](snippet.1109.fs)
 ```
 let result =
     let function3 (a, b) = a + b
     100 * function3 (1, 2)
 ```
 
-## snippet.1110.fs
+### [snippet.1110.fs](snippet.1110.fs)
 ```
 type MyClass(a) =
     let field1 = a
@@ -340,33 +340,33 @@ type MyClass(a) =
         printfn "Field1 %d Field2 %s Input %A" field1 field2 input
 ```
 
-## snippet.1111.fs
+### [snippet.1111.fs](snippet.1111.fs)
 ```
 [<Obsolete>]
 let function1 x y = x + y
 ```
 
-## snippet.1112.fs
+### [snippet.1112.fs](snippet.1112.fs)
 ```
 let  a2, [<Obsolete>] b2 = (1, 2)
 ```
 
-## snippet.1203.fs
+### [snippet.1203.fs](snippet.1203.fs)
 ```
 let function1 (a, b) = a + b
 ```
 
-## snippet.1207.fs
+### [snippet.1207.fs](snippet.1207.fs)
 ```
 let sum a b = a + b
 ```
 
-## snippet.1301.fs
+### [snippet.1301.fs](snippet.1301.fs)
 ```
 let list123 = [ 1; 2; 3 ]
 ```
 
-## snippet.13011.fs
+### [snippet.13011.fs](snippet.13011.fs)
 ```
 let list123 = [
     1
@@ -374,38 +374,38 @@ let list123 = [
     3 ]
 ```
 
-## snippet.13012.fs
+### [snippet.13012.fs](snippet.13012.fs)
 ```
 let myControlList : Control list = [ new Button(); new CheckBox() ]
 ```
 
-## snippet.1302.fs
+### [snippet.1302.fs](snippet.1302.fs)
 ```
 let list1 = [ 1 .. 10 ]
 ```
 
-## snippet.1303.fs
+### [snippet.1303.fs](snippet.1303.fs)
 ```
 let listOfSquares = [ for i in 1 .. 10 -> i*i ]
 ```
 
-## snippet.1304.fs
+### [snippet.1304.fs](snippet.1304.fs)
 ```
 // An empty list.
 let listEmpty = []
 ```
 
-## snippet.1305.fs
+### [snippet.1305.fs](snippet.1305.fs)
 ```
 let list2 = 100 :: list1
 ```
 
-## snippet.1306.fs
+### [snippet.1306.fs](snippet.1306.fs)
 ```
 let list3 = list1 @ list2
 ```
 
-## snippet.1307.fs
+### [snippet.1307.fs](snippet.1307.fs)
 ```
 let list1 = [ 1; 2; 3 ]
 
@@ -418,7 +418,7 @@ printfn "list1.Tail.Tail.Head is %d" (list1.Tail.Tail.Head)
 printfn "list1.Item(1) is %d" (list1.Item(1))
 ```
 
-## snippet.13071.fs
+### [snippet.13071.fs](snippet.13071.fs)
 ```
 let rec sum list =
    match list with
@@ -426,7 +426,7 @@ let rec sum list =
    | [] -> 0
 ```
 
-## snippet.13072.fs
+### [snippet.13072.fs](snippet.13072.fs)
 ```
 let sum list =
    let rec loop list acc =
@@ -436,7 +436,7 @@ let sum list =
    loop list 0
 ```
 
-## snippet.1308.fs
+### [snippet.1308.fs](snippet.1308.fs)
 ```
 let IsPrimeMultipleTest n x =
    x = n || x % n <> 0
@@ -454,7 +454,7 @@ let GetPrimesUpTo n =
 printfn "Primes Up To %d:\n %A" 100 (GetPrimesUpTo 100)
 ```
 
-## snippet.1309.fs
+### [snippet.1309.fs](snippet.1309.fs)
 ```
 let list1 = [1;2;3]
 let list2 = [4;5;6]
@@ -467,13 +467,13 @@ List.iteri2 (fun i x y ->
             list1 list2
 ```
 
-## snippet.1310.fs
+### [snippet.1310.fs](snippet.1310.fs)
 ```
 let newList = List.map (fun x -> x + 1) list1
 printfn "%A" newList
 ```
 
-## snippet.1311.fs
+### [snippet.1311.fs](snippet.1311.fs)
 ```
 let sumList = List.map2 (fun x y -> x + y) list1 list2
 printfn "%A" sumList
@@ -491,12 +491,12 @@ let listAddTimesIndex = List.mapi2 (fun i x y -> (x + y) * i) list1 list2
 printfn "%A" listAddTimesIndex
 ```
 
-## snippet.1312.fs
+### [snippet.1312.fs](snippet.1312.fs)
 ```
 let evenOnlyList = List.filter (fun x -> x % 2 = 0) [1; 2; 3; 4; 5; 6]
 ```
 
-## snippet.1401.fs
+### [snippet.1401.fs](snippet.1401.fs)
 ```
 let exists (x : int option) =
     match x with
@@ -504,7 +504,7 @@ let exists (x : int option) =
     | None -> false
 ```
 
-## snippet.1402.fs
+### [snippet.1402.fs](snippet.1402.fs)
 ```
 open System.IO
 let openFile filename =
@@ -516,7 +516,7 @@ let openFile filename =
                 None
 ```
 
-## snippet.1403.fs
+### [snippet.1403.fs](snippet.1403.fs)
 ```
 let rec tryFindMatch pred list =
     match list with
@@ -532,28 +532,28 @@ let result1 = tryFindMatch (fun elem -> elem = 100) [ 200; 100; 50; 25 ]
 let result2 = tryFindMatch (fun elem -> elem = 26) [ 200; 100; 50; 25 ]
 ```
 
-## snippet.1404.fs
+### [snippet.1404.fs](snippet.1404.fs)
 ```
 let keepIfPositive (a : int) = if a > 0 then Some(a) else None
 ```
 
-## snippet.1501.fs
+### [snippet.1501.fs](snippet.1501.fs)
 ```
 seq { 1 .. 5 }
 ```
 
-## snippet.1502.fs
+### [snippet.1502.fs](snippet.1502.fs)
 ```
 // Sequence that has an increment.
 seq { 0 .. 10 .. 100 }
 ```
 
-## snippet.1503.fs
+### [snippet.1503.fs](snippet.1503.fs)
 ```
 seq { for i in 1 .. 10 -> i * i }
 ```
 
-## snippet.1504.fs
+### [snippet.1504.fs](snippet.1504.fs)
 ```
 seq { for i in 1 .. 10 do yield i * i }
 
@@ -561,7 +561,7 @@ seq { for i in 1 .. 10 do yield i * i }
 seq { for i in 1 .. 10 do i * i }
 ```
 
-## snippet.1505.fs
+### [snippet.1505.fs](snippet.1505.fs)
 ```
 let (height, width) = (10, 10)
 
@@ -572,12 +572,12 @@ seq {
     }
 ```
 
-## snippet.1506.fs
+### [snippet.1506.fs](snippet.1506.fs)
 ```
 seq { for n in 1 .. 100 do if isprime n then n }
 ```
 
-## snippet.1507.fs
+### [snippet.1507.fs](snippet.1507.fs)
 ```
 // Recursive isprime function.
 let isprime n =
@@ -596,7 +596,7 @@ for x in aSequence do
     printfn "%d" x
 ```
 
-## snippet.1508.fs
+### [snippet.1508.fs](snippet.1508.fs)
 ```
 let multiplicationTable =
     seq {
@@ -606,7 +606,7 @@ let multiplicationTable =
     }
 ```
 
-## snippet.1509.fs
+### [snippet.1509.fs](snippet.1509.fs)
 ```
 // Yield the values of a binary tree in a sequence.
 type Tree<'a> =
@@ -629,46 +629,46 @@ let seq1 = inorder mytree
 printfn "%A" seq1
 ```
 
-## snippet.1601.fs
+### [snippet.1601.fs](snippet.1601.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 ```
 
-## snippet.1602.fs
+### [snippet.1602.fs](snippet.1602.fs)
 ```
 let array3 = [| for i in 1 .. 10 -> i * i |]
 ```
 
-## snippet.1603.fs
+### [snippet.1603.fs](snippet.1603.fs)
 ```
 array1[1]
 ```
 
-## snippet.1604.fs
+### [snippet.1604.fs](snippet.1604.fs)
 ```
 array1[0..2]  // elements from 0 to 2
 array1[..2] // elements the beginning of the array to 2
 array1[2..] // elements from 2 to the end
 ```
 
-## snippet.1605.fs
+### [snippet.1605.fs](snippet.1605.fs)
 ```
 let arrayOfTenZeroes : int array = Array.zeroCreate 10
 ```
 
-## snippet.1700.fs
+### [snippet.1700.fs](snippet.1700.fs)
 ```
 let makeList a b =
     [a; b]
 ```
 
-## snippet.1701.fs
+### [snippet.1701.fs](snippet.1701.fs)
 ```
 let function1 (x: 'a) (y: 'a) =
     printfn "%A %A" x y
 ```
 
-## snippet.1702.fs
+### [snippet.1702.fs](snippet.1702.fs)
 ```
 // In this case, the type argument is inferred to be int.
 function1 10 20
@@ -685,19 +685,19 @@ let function3 a b =
     function2<int> a b
 ```
 
-## snippet.1703.fs
+### [snippet.1703.fs](snippet.1703.fs)
 ```
 let function2<'T> (x: 'T) (y: 'T) =
     printfn "%A, %A" x y
 ```
 
-## snippet.1704.fs
+### [snippet.1704.fs](snippet.1704.fs)
 ```
 let printSequence (sequence1: Collections.seq<_>) =
    Seq.iter (fun elem -> printf "%s " (elem.ToString())) sequence1
 ```
 
-## snippet.1705.fs
+### [snippet.1705.fs](snippet.1705.fs)
 ```
 // A generic function.
 // In this example, the generic type parameter 'a makes function3 generic.
@@ -734,24 +734,24 @@ type Test() =
          printfn "%A, %A" x y
 ```
 
-## snippet.1801.fs
+### [snippet.1801.fs](snippet.1801.fs)
 ```
 let max a b = if a > b then a else b
 ```
 
-## snippet.1802.fs
+### [snippet.1802.fs](snippet.1802.fs)
 ```
 let biggest_float = max 2.0 3.0
 
 let biggest_int = max 2 3
 ```
 
-## snippet.1803.fs
+### [snippet.1803.fs](snippet.1803.fs)
 ```
 let test_string = max "cab" "cat"
 ```
 
-## snippet.1804.fs
+### [snippet.1804.fs](snippet.1804.fs)
 ```
 // Case 1: Too complex an expression.
 // In this example, the list sqrList is intended to be a list of integers,
@@ -780,7 +780,7 @@ let emptyset1 = Set.Empty
 let emptyset2<'a> : Set<'a> = Set.Empty
 ```
 
-## snippet.1901.fs
+### [snippet.1901.fs](snippet.1901.fs)
 ```
 // Labels are separated by semicolons when defined on the same line.
 type Point = { X: float; Y: float; Z: float; }
@@ -800,13 +800,13 @@ type StructPoint =
       Z: float }
 ```
 
-## snippet.1902.fs
+### [snippet.1902.fs](snippet.1902.fs)
 ```
 let mypoint1 = { new Point with x = 1.0 and y = 1.0 and z = -1.0 }
 let mypoint2 = { x = 1.0; y = 1.0; z = -1.0; }
 ```
 
-## snippet.1903.fs
+### [snippet.1903.fs](snippet.1903.fs)
 ```
 type Point = { X: float; Y: float; Z: float; }
 type Point3D = { X: float; Y: float; Z: float }
@@ -814,7 +814,7 @@ type Point3D = { X: float; Y: float; Z: float }
 let mypoint3D = { X = 1.0; Y = 1.0; Z = 0.0; }
 ```
 
-## snippet.1904.fs
+### [snippet.1904.fs](snippet.1904.fs)
 ```
 type MyRecord = 
     { X: int
@@ -824,27 +824,27 @@ type MyRecord =
 let myRecord1 = { X = 1; Y = 2; Z = 3; }
 ```
 
-## snippet.1905.fs
+### [snippet.1905.fs](snippet.1905.fs)
 ```
 let myRecord2 = { MyRecord.X = 1; MyRecord.Y = 2; MyRecord.Z = 3 }
 ```
 
-## snippet.1906.fs
+### [snippet.1906.fs](snippet.1906.fs)
 ```
 let myRecord3 = { myRecord2 with Y = 100; Z = 2 }
 ```
 
-## snippet.1907.fs
+### [snippet.1907.fs](snippet.1907.fs)
 ```
 let mypoint = { X = 1.0; Y = 1.0; Z = -1.0; }
 ```
 
-## snippet.1908.fs
+### [snippet.1908.fs](snippet.1908.fs)
 ```
 let myPoint1 = { Point.X = 1.0; Y = 1.0; Z = 0.0; }
 ```
 
-## snippet.1909.fs
+### [snippet.1909.fs](snippet.1909.fs)
 ```
 type Car = 
     { Make : string
@@ -855,7 +855,7 @@ let myCar = { Make = "Fabrikam"; Model = "Coupe"; Odometer = 108112 }
 myCar.Odometer <- myCar.Odometer + 21
 ```
 
-## snippet.1910.fs
+### [snippet.1910.fs](snippet.1910.fs)
 ```
 type Point3D = { X: float; Y: float; Z: float }
 let evaluatePoint (point: Point3D) =
@@ -871,7 +871,7 @@ evaluatePoint { X = 100.0; Y = 0.0; Z = 0.0 }
 evaluatePoint { X = 10.0; Y = 0.0; Z = -1.0 }
 ```
 
-## snippet.1911.fs
+### [snippet.1911.fs](snippet.1911.fs)
 ```
 type RecordTest = { X: int; Y: int }
 
@@ -884,14 +884,14 @@ else
     printfn "The records are unequal."
 ```
 
-## snippet.2001.fs
+### [snippet.2001.fs](snippet.2001.fs)
 ```
 let myOption1 = Some(10.0)
 let myOption2 = Some("string")
 let myOption3 = None
 ```
 
-## snippet.2002.fs
+### [snippet.2002.fs](snippet.2002.fs)
 ```
 let printValue opt =
     match opt with
@@ -899,7 +899,7 @@ let printValue opt =
     | None -> printfn "No value."
 ```
 
-## snippet.2003.fs
+### [snippet.2003.fs](snippet.2003.fs)
 ```
 type Shape =
   // The value here is the radius.
@@ -912,7 +912,7 @@ type Shape =
 | Rectangle of double * double
 ```
 
-## snippet.2004.fs
+### [snippet.2004.fs](snippet.2004.fs)
 ```
 let pi = 3.141592654
 
@@ -936,7 +936,7 @@ let myRectangle = Rectangle(height, width)
 printfn "Area of rectangle that has height %f and width %f is %f" height width (area myRectangle)
 ```
 
-## snippet.2005.fs
+### [snippet.2005.fs](snippet.2005.fs)
 ```
 type Tree =
     | Tip
@@ -951,7 +951,7 @@ let myTree = Node(0, Node(1, Node(2, Tip, Tip), Node(3, Tip, Tip)), Node(4, Tip,
 let resultSumTree = sumTree myTree
 ```
 
-## snippet.2006.fs
+### [snippet.2006.fs](snippet.2006.fs)
 ```
 type Expression =
     | Number of int
@@ -977,7 +977,7 @@ let expressionTree1 = Add(Variable "a", Multiply(Number 2, Variable "b"))
 let result = Evaluate environment expressionTree1
 ```
 
-## snippet.2101.fs
+### [snippet.2101.fs](snippet.2101.fs)
 ```
 // Declaration of an enumeration.
 type Color =
@@ -988,18 +988,18 @@ type Color =
 let col1 : Color = Color.Red
 ```
 
-## snippet.2102.fs
+### [snippet.2102.fs](snippet.2102.fs)
 ```
 // Conversion to an integral type.
 let n = int col1
 ```
 
-## snippet.2103.fs
+### [snippet.2103.fs](snippet.2103.fs)
 ```
 let col2 = enum<Color>(3)
 ```
 
-## snippet.2104.fs
+### [snippet.2104.fs](snippet.2104.fs)
 ```
 type uColor =
    | Red = 0u
@@ -1008,7 +1008,7 @@ type uColor =
 let col3 = Microsoft.FSharp.Core.LanguagePrimitives.EnumOfValue<uint32, uColor>(2u)
 ```
 
-## snippet.2201.fs
+### [snippet.2201.fs](snippet.2201.fs)
 ```
 // Declare a reference.
 let refVar = ref 6
@@ -1020,7 +1020,7 @@ refVar := 50
 printfn "%d" !refVar
 ```
 
-## snippet.2203.fs
+### [snippet.2203.fs](snippet.2203.fs)
 ```
 let xRef : int ref = ref 10
 
@@ -1033,7 +1033,7 @@ xRef.contents <- 12
 printfn "%d" (xRef.contents)
 ```
 
-## snippet.2204.fs
+### [snippet.2204.fs](snippet.2204.fs)
 ```
 type Incrementor(delta) =
     member this.Increment(i : int byref) =
@@ -1056,7 +1056,7 @@ incrementor.Increment(refInt)
 printfn "%d" !refInt
 ```
 
-## snippet.2205.fs
+### [snippet.2205.fs](snippet.2205.fs)
 ```
 // Print all the lines read in from the console.
 let printLines1() =
@@ -1090,7 +1090,7 @@ let printLines3() =
     }
 ```
 
-## snippet.2207.fs
+### [snippet.2207.fs](snippet.2207.fs)
 ```
 // The following code demonstrates the use of reference
 // cells to enable partially applied arguments to be changed
@@ -1139,24 +1139,24 @@ myRefIncrement := 12
 printfn "%d" (incrementRef2 100)
 ```
 
-## snippet.2301.fs
+### [snippet.2301.fs](snippet.2301.fs)
 ```
 type SizeType = uint32
 ```
 
-## snippet.2302.fs
+### [snippet.2302.fs](snippet.2302.fs)
 ```
 type Transform<'a> = 'a -> 'a
 ```
 
-## snippet.2401.fs
+### [snippet.2401.fs](snippet.2401.fs)
 ```
 type MyClass1(x: int, y: int) =
    do printfn "%d %d" x y
    new() = MyClass1(0, 0)
 ```
 
-## snippet.2402.fs
+### [snippet.2402.fs](snippet.2402.fs)
 ```
 type MyClass2(dataIn) as self =
    let data = dataIn
@@ -1166,24 +1166,24 @@ type MyClass2(dataIn) as self =
        printf "Creating MyClass2 with Data %d" data
 ```
 
-## snippet.2403.fs
+### [snippet.2403.fs](snippet.2403.fs)
 ```
 type MyGenericClass<'a> (x: 'a) =
    do printfn "%A" x
 ```
 
-## snippet.24031.fs
+### [snippet.24031.fs](snippet.24031.fs)
 ```
 let g1 = MyGenericClass( seq { for i in 1 .. 10 -> (i, i*i) } )
 ```
 
-## snippet.24032.fs
+### [snippet.24032.fs](snippet.24032.fs)
 ```
 type ISprintable =
     abstract member Print : format:string -> unit
 ```
 
-## snippet.2404.fs
+### [snippet.2404.fs](snippet.2404.fs)
 ```
 open System.IO
 
@@ -1201,7 +1201,7 @@ for file in folder1.FileArray do
    printfn "%s" file.Name
 ```
 
-## snippet.2501.fs
+### [snippet.2501.fs](snippet.2501.fs)
 ```
 // In Point3D, three immutable values are defined.
 // x, y, and z will be initialized to 0.0.
@@ -1232,7 +1232,7 @@ type Point2D =
     end
 ```
 
-## snippet.2601.fs
+### [snippet.2601.fs](snippet.2601.fs)
 ```
 type MyClassBase1() =
    let mutable z = 0
@@ -1244,7 +1244,7 @@ type MyClassDerived1() =
    override u.function1(a: int) = a + 1
 ```
 
-## snippet.2602.fs
+### [snippet.2602.fs](snippet.2602.fs)
 ```
 type MyClassBase2(x: int) =
    let mutable z = x * x
@@ -1256,7 +1256,7 @@ type MyClassDerived2(y: int) =
    do for i in 1..y do printf "%d " i
 ```
 
-## snippet.2603.fs
+### [snippet.2603.fs](snippet.2603.fs)
 ```
 open System
 
@@ -1267,7 +1267,7 @@ let object1 = { new Object() with
 printfn "%s" (object1.ToString())
 ```
 
-## snippet.2801.fs
+### [snippet.2801.fs](snippet.2801.fs)
 ```
 type IPrintable =
    abstract member Print : unit -> unit
@@ -1277,13 +1277,13 @@ type SomeClass1(x: int, y: float) =
       member this.Print() = printfn "%d %f" x y
 ```
 
-## snippet.2802.fs
+### [snippet.2802.fs](snippet.2802.fs)
 ```
 let x1 = new SomeClass1(1, 2.0)
 (x1 :> IPrintable).Print()
 ```
 
-## snippet.2803.fs
+### [snippet.2803.fs](snippet.2803.fs)
 ```
 type SomeClass2(x: int, y: float) =
    member this.Print() = (this :> IPrintable).Print()
@@ -1294,7 +1294,7 @@ let x2 = new SomeClass2(1, 2.0)
 x2.Print()
 ```
 
-## snippet.2804.fs
+### [snippet.2804.fs](snippet.2804.fs)
 ```
 let makePrintable(x: int, y: float) =
     { new IPrintable with
@@ -1303,7 +1303,7 @@ let x3 = makePrintable(1, 2.0)
 x3.Print()
 ```
 
-## snippet.2805.fs
+### [snippet.2805.fs](snippet.2805.fs)
 ```
 type Interface1 =
     abstract member Method1 : int -> int
@@ -1323,7 +1323,7 @@ type MyClass() =
         member this.Method3(n) = n / 10
 ```
 
-## snippet.2901.fs
+### [snippet.2901.fs](snippet.2901.fs)
 ```
 // An abstract class that has some methods and properties defined
 // and some left abstract.
@@ -1394,7 +1394,7 @@ List.iter (fun (elem : Shape2D) ->
           shapeList
 ```
 
-## snippet.3001.fs
+### [snippet.3001.fs](snippet.3001.fs)
 ```
 type PointWithCounter(a: int, b: int) =
     // A variable i.
@@ -1423,7 +1423,7 @@ let point1 = PointWithCounter(10, 52)
 printfn "%d %d %d %d" (point1.Prop1) (point1.Prop2) (point1.CreatedCount) (point1.FunctionValue)
 ```
 
-## snippet.3101.fs
+### [snippet.3101.fs](snippet.3101.fs)
 ```
 open System
 
@@ -1441,7 +1441,7 @@ type MyType(a:int, b:int) as this =
 let obj1 = new MyType(1, 2)
 ```
 
-## snippet.3201.fs
+### [snippet.3201.fs](snippet.3201.fs)
 ```
 // A read-only property.
 member this.MyReadOnlyProperty = myInternalValue
@@ -1453,7 +1453,7 @@ member this.MyReadWriteProperty
     and set (value) = myInternalValue <- value
 ```
 
-## snippet.3202.fs
+### [snippet.3202.fs](snippet.3202.fs)
 ```
 type MyClass(x : string) =
     let mutable myInternalValue = x
@@ -1462,20 +1462,20 @@ type MyClass(x : string) =
          and set(value) = myInternalValue <- value
 ```
 
-## snippet.3203.fs
+### [snippet.3203.fs](snippet.3203.fs)
 ```
 member this.MyReadWriteProperty with get () = myInternalValue
 member this.MyReadWriteProperty with set (value) = myInternalValue <- value
 ```
 
-## snippet.3204.fs
+### [snippet.3204.fs](snippet.3204.fs)
 ```
 static member MyStaticProperty
     with get() = myStaticValue
     and set(value) = myStaticValue <- value
 ```
 
-## snippet.3205.fs
+### [snippet.3205.fs](snippet.3205.fs)
 ```
 // To apply a type annotation to a property that does not have an explicit
 // get or set, apply the type annotation directly to the property.
@@ -1484,7 +1484,7 @@ member this.MyProperty1 : int = myInternalValue
 member this.MyProperty2 with get() : int = myInternalValue
 ```
 
-## snippet.3206.fs
+### [snippet.3206.fs](snippet.3206.fs)
 ```
 // Assume that the constructor argument sets the initial value of the
 // internal backing store.
@@ -1493,7 +1493,7 @@ myObject.MyProperty <- 20
 printfn "%d" (myObject.MyProperty)
 ```
 
-## snippet.3207.fs
+### [snippet.3207.fs](snippet.3207.fs)
 ```
 // Abstract property in abstract class.
 // The property is an int type that has a get and
@@ -1521,7 +1521,7 @@ type Derived2() =
    override this.Property1 with get() = value2 and set(v) = value2 <- v
 ```
 
-## snippet.3301.fs
+### [snippet.3301.fs](snippet.3301.fs)
 ```
 type NumberStrings() =
    let mutable ordinals = [| "one"; "two"; "three"; "four"; "five";
@@ -1553,7 +1553,7 @@ for i in 0 .. 9 do
 printfn ""
 ```
 
-## snippet.3302.fs
+### [snippet.3302.fs](snippet.3302.fs)
 ```
 open System.Collections.Generic
 
@@ -1568,7 +1568,7 @@ for i in 1..1000 do
     matrix1[i, i] <- float i * float i
 ```
 
-## snippet.3401.fs
+### [snippet.3401.fs](snippet.3401.fs)
 ```
 type SomeType(factor0: int) =
    let factor = factor0
@@ -1579,7 +1579,7 @@ type SomeType(factor0: int) =
       this.SomeMethod(a, b, c) * factor
 ```
 
-## snippet.3402.fs
+### [snippet.3402.fs](snippet.3402.fs)
 ```
 static member SomeStaticMethod(a, b, c) =
    (a + b + c)
@@ -1588,7 +1588,7 @@ static member SomeOtherStaticMethod(a, b, c) =
    SomeType.SomeStaticMethod(a, b, c) * 100
 ```
 
-## snippet.3403.fs
+### [snippet.3403.fs](snippet.3403.fs)
 ```
 type Ellipse(a0 : float, b0 : float, theta0 : float) =
     let mutable axis1 = a0
@@ -1598,7 +1598,7 @@ type Ellipse(a0 : float, b0 : float, theta0 : float) =
     default this.Rotate(delta : float) = rotAngle <- rotAngle + delta
 ```
 
-## snippet.3404.fs
+### [snippet.3404.fs](snippet.3404.fs)
 ```
 type Circle(radius : float) =
     inherit Ellipse(radius, radius, 0.0)
@@ -1606,7 +1606,7 @@ type Circle(radius : float) =
     override this.Rotate(_) = ()
 ```
 
-## snippet.3405.fs
+### [snippet.3405.fs](snippet.3405.fs)
 ```
 type SomeType2 =
    member this.SomeMethod(a : int, b : int) =
@@ -1619,7 +1619,7 @@ type SomeType2 =
      a + b
 ```
 
-## snippet.3406.fs
+### [snippet.3406.fs](snippet.3406.fs)
 ```
 type RectangleXY(x1 : float, y1: float, x2: float, y2: float) =
     // Field definitions.
@@ -1663,7 +1663,7 @@ let testIntersection =
 testIntersection
 ```
 
-## snippet.3501.fs
+### [snippet.3501.fs](snippet.3501.fs)
 ```
 // x, y and return value inferred to be int
 // function1: int -> int -> int
@@ -1674,14 +1674,14 @@ let function1 x y = x + y
 let function2 (x: float) y = x + y
 ```
 
-## snippet.4001.fs
+### [snippet.4001.fs](snippet.4001.fs)
 ```
 let rec fib n =
    if n <= 2 then 1
    else fib (n - 1) + fib (n - 2)
 ```
 
-## snippet.4002.fs
+### [snippet.4002.fs](snippet.4002.fs)
 ```
 let rec Even x = 
     if x = 0 then true 

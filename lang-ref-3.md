@@ -1,54 +1,54 @@
-## snippet.0101.fs
+### [snippet.0101.fs](snippet.0101.fs)
 ```
 let max a b = if a > b then a else b
 ```
 
-## snippet.0102.fs
+### [snippet.0102.fs](snippet.0102.fs)
 ```
 let biggestFloat = max 2.0 3.0
 let biggestInt = max 2 3
 ```
 
-## snippet.0103.fs
+### [snippet.0103.fs](snippet.0103.fs)
 ```
 // Error: type mismatch.
 //let biggestIntFloat = max 2.0 3
 ```
 
-## snippet.0104.fs
+### [snippet.0104.fs](snippet.0104.fs)
 ```
 let testString = max "cab" "cat"
 ```
 
-## snippet.0105.fs
+### [snippet.0105.fs](snippet.0105.fs)
 ```
 //let sqrList = [ for i in 1..10 -> i*i ]
 // Adding a type annotation fixes the problem:
 let sqrList : int list = [ for i in 1..10 -> i*i ]
 ```
 
-## snippet.0106.fs
+### [snippet.0106.fs](snippet.0106.fs)
 ```
 //let maxhash = max hash
 // The following is acceptable because the argument for maxhash is explicit:
 let maxhash obj = max (hash obj)
 ```
 
-## snippet.0107.fs
+### [snippet.0107.fs](snippet.0107.fs)
 ```
 //let emptyList10 = Array.create 10 []
 // Adding an extra (unused) parameter makes it a function, which is generalizable.
 let emptyList10 () = Array.create 10 []
 ```
 
-## snippet.0108.fs
+### [snippet.0108.fs](snippet.0108.fs)
 ```
 //let emptyset = Set.empty
 // Adding a type parameter and type annotation lets you write a generic value.
 let emptyset<'a when 'a : comparison> : Set<'a> = Set.empty
 ```
 
-## snippet.0201.fs
+### [snippet.0201.fs](snippet.0201.fs)
 ```
 let inline increment x = x + 1
 type WrapInt32() =
@@ -56,18 +56,18 @@ type WrapInt32() =
     static member inline Increment(x) = x + 1
 ```
 
-## snippet.0202.fs
+### [snippet.0202.fs](snippet.0202.fs)
 ```
 let inline printAsFloatingPoint number =
     printfn "%f" (float number)
 ```
 
-## snippet.0301.fs
+### [snippet.0301.fs](snippet.0301.fs)
 ```
 let f a b = a + b + 100
 ```
 
-## snippet.0302.fs
+### [snippet.0302.fs](snippet.0302.fs)
 ```
 // Type annotations on a parameter.
 let addu1 (x : uint32) y =
@@ -78,24 +78,24 @@ let addu2 x y =
     (x : uint32) + y
 ```
 
-## snippet.0303.fs
+### [snippet.0303.fs](snippet.0303.fs)
 ```
 let addu1 x y : uint32 =
    x + y
 ```
 
-## snippet.0304.fs
+### [snippet.0304.fs](snippet.0304.fs)
 ```
 let replace(str: string) =
     str.Replace("A", "a")
 ```
 
-## snippet.0305.fs
+### [snippet.0305.fs](snippet.0305.fs)
 ```
 let makeTuple a b = (a, b)
 ```
 
-## snippet.0401.fs
+### [snippet.0401.fs](snippet.0401.fs)
 ```
 let inline (+@) x y = x + x * y
 // Call that uses int.
@@ -104,7 +104,7 @@ printfn "%d" (1 +@ 1)
 printfn "%f" (1.0 +@ 0.5)
 ```
 
-## snippet.0501.fs
+### [snippet.0501.fs](snippet.0501.fs)
 ```
 open Microsoft.FSharp.Quotations
 // A typed code quotation.
@@ -113,7 +113,7 @@ let expr : Expr<int> = <@ 1 + 1 @>
 let expr2 : Expr = <@@ 1 + 1 @@>
 ```
 
-## snippet.0502.fs
+### [snippet.0502.fs](snippet.0502.fs)
 ```
 // Valid:
 <@ let f x = x + 10 in f 20 @>
@@ -124,7 +124,7 @@ let expr2 : Expr = <@@ 1 + 1 @@>
 @>
 ```
 
-## snippet.0601.fs
+### [snippet.0601.fs](snippet.0601.fs)
 ```
 module Print
 open Microsoft.FSharp.Quotations
@@ -196,7 +196,7 @@ println exprCall
 println <@@ let f x = x + 10 in f 10 @@>
 ```
 
-## snippet.0701.fs
+### [snippet.0701.fs](snippet.0701.fs)
 ```
 module Module1
 open Print

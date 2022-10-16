@@ -1,4 +1,4 @@
-## snippet.0001.fs
+### [snippet.0001.fs](snippet.0001.fs)
 ```
 // Module1.fs
 
@@ -30,7 +30,7 @@ let result1 = myPrivateObj.Z
 let result2 = myInternalObj.Z
 ```
 
-## snippet.0002.fs
+### [snippet.0002.fs](snippet.0002.fs)
 ```
 // Module2.fs
 module Module2

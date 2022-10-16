@@ -1,20 +1,19 @@
 Param (
-    [Parameter(Position=0)] [string]$folder = "-"
+    [Parameter(Position=0)] [string]$inp = "src",
+	[Parameter(Position=1)] [string]$out = "."
 )
 
 
-if ($folder -ne "-") {
+if ($out -ne "-") {
 
-	$outfile="${folder}.md"
+	$outfile="${out}.md"
 	
-    Write-Host "Create Summary for folder $folder in $outfile"
-
 	if (Test-Path $outfile) {
 		Remove-Item $outfile
 	}
 	New-Item $outfile
 
-	Get-ChildItem -Recurse *.fs* -Path $folder		| `
+	Get-ChildItem -Recurse *.fs* -Path $inp		| `
 	ForEach-Object {
 		$name = $_.Name
 

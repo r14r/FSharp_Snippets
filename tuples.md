@@ -1,4 +1,4 @@
-## basic-examples.fsx
+### [basic-examples.fsx](basic-examples.fsx)
 ```
 //
 // Basic examples
@@ -96,7 +96,7 @@ let result = addTen 95
 // Result is 105.
 ```
 
-## interop.fsx
+### [interop.fsx](interop.fsx)
 ```
 //
 // Will not compile!
@@ -122,7 +122,7 @@ let (a, b) = (1, 2)
 let struct (c, d) = struct (a, b)
 ```
 
-## using-tuples.fsx
+### [using-tuples.fsx](using-tuples.fsx)
 ```
 let divRem a b =
    let x = a / b

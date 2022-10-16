@@ -1,4 +1,4 @@
-## blob-storage.fsx
+### [blob-storage.fsx](blob-storage.fsx)
 ```
 open System
 open System.IO
@@ -148,7 +148,7 @@ let downloadedText = appendBlob.DownloadContent().ToString()
 printfn $"{downloadedText}"
 ```
 
-## file-storage.fsx
+### [file-storage.fsx](file-storage.fsx)
 ```
 open System
 open System.IO
@@ -310,7 +310,7 @@ props.MinuteMetrics = ShareMetrics(
 shareService.SetPropertiesAsync(props)
 ```
 
-## queue-storage.fsx
+### [queue-storage.fsx](queue-storage.fsx)
 ```
 open Azure.Storage.Queues // Namespace for Queue storage types
 open System
@@ -408,7 +408,7 @@ let count = properties.ApproximateMessagesCount
 queueClient.DeleteIfExists()
 ```
 
-## table-storage.fsx
+### [table-storage.fsx](table-storage.fsx)
 ```
 // <nuget>
 #r "nuget:Azure.Data.Tables" // Load the Azure Data Tables nuget package

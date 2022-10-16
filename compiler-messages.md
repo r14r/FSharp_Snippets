@@ -1,4 +1,4 @@
-## fs0001.fsx
+### [fs0001.fsx](fs0001.fsx)
 ```
 (* simple type annotation mismatch example *)
 let booleanBinding: bool = 10
@@ -28,7 +28,7 @@ printThenAdd "a number"
 |> ignore
 ```
 
-## fs0002.fsx
+### [fs0002.fsx](fs0002.fsx)
 ```
 let ignoreInt (f: int) = ()
 
@@ -40,7 +40,7 @@ let ignoreInt (i: int) = ()
 do ignoreInt 1
 ```
 
-## fs0003.fsx
+### [fs0003.fsx](fs0003.fsx)
 ```
 (* passing a parameter to a value *)
 let v = 10
@@ -52,7 +52,7 @@ let listOfInts = [1; 2; 3]
 printfn "%d" (listOfInts[1])
 ```
 
-## fs0005.fsx
+### [fs0005.fsx](fs0005.fsx)
 ```
 (* simple mutable assignment of immutable record field example  *)
 type Food =  { Kind: string
@@ -82,7 +82,7 @@ let apple = { Kind = "apple"
 let orange = { apple with Kind = "orange" }
 ```
 
-## fs0008.fsx
+### [fs0008.fsx](fs0008.fsx)
 ```
 (* example of unboxing an obj to an unknown type *)
 let unboxAndPrint x = 
@@ -101,7 +101,7 @@ let unboxAndPrint x =
     printfn "%s" (string x)
 ```
 
-## fs0009.fsx
+### [fs0009.fsx](fs0009.fsx)
 ```
 (* use of unverifiable function *)
 let n: nativeptr<bool> = NativeInterop.NativePtr.stackalloc 1
@@ -121,7 +121,7 @@ type EmptyStruct =
     struct end
 ```
 
-## fs0025.fsx
+### [fs0025.fsx](fs0025.fsx)
 ```
 (* declaration and construction of Discriminated Union *)
 type Faucet =
@@ -148,7 +148,7 @@ let wildcardFaucetString =
     | _ -> "Other"
 ```
 
-## fs0037.fsx
+### [fs0037.fsx](fs0037.fsx)
 ```
 (* duplicate definition *)
 let a = 5
@@ -168,7 +168,7 @@ let mutable e = 5
 e <- 6
 ```
 
-## fs0052.fsx
+### [fs0052.fsx](fs0052.fsx)
 ```
 (* warn *)
 System.DateTime.Now.ToString() |> printfn "%s"
@@ -181,7 +181,7 @@ now.ToString() |> printfn "%s"
 System.DateTime.Now |> printfn "%A"
 ```
 
-## fs0703.fsx
+### [fs0703.fsx](fs0703.fsx)
 ```
 (*
 Trying to use the result of typeof

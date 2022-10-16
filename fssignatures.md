@@ -1,4 +1,4 @@
-## snippet.9001.fs
+### [snippet.9001.fs](snippet.9001.fs)
 ```
 namespace Library1
 
@@ -27,7 +27,7 @@ module Module1 =
         abstract member method2 : string -> unit
 ```
 
-## snippet.9002.fs
+### [snippet.9002.fs](snippet.9002.fs)
 ```
 // Module1.fsi
 
@@ -51,7 +51,7 @@ namespace Library1
         abstract member method2 : string -> unit
 ```
 
-## snippet.9004.fs
+### [snippet.9004.fs](snippet.9004.fs)
 ```
 // Module1.fsi
 

@@ -1,4 +1,4 @@
-## hello-square.fs
+### [hello-square.fs](hello-square.fs)
 ```
 module HelloSquare
 
@@ -10,7 +10,7 @@ let main argv =
     0 // Return an integer exit code
 ```
 
-## pig-latin.fs
+### [pig-latin.fs](pig-latin.fs)
 ```
 namespace ClassLibraryDemo
 
@@ -28,7 +28,7 @@ module PigLatin =
             word[1..] + string word[0] + "ay"
 ```
 
-## to-pig-latin.fsx
+### [to-pig-latin.fsx](to-pig-latin.fsx)
 ```
 let toPigLatin (word: string) =
     let isVowel (c: char) =

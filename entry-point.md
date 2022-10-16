@@ -1,4 +1,4 @@
-## snippet.0501.fs
+### [snippet.0501.fs](snippet.0501.fs)
 ```
 [<EntryPoint>]
 let main args =

@@ -1,4 +1,4 @@
-## snippet.0001.fs
+### [snippet.0001.fs](snippet.0001.fs)
 ```
 let anInt = 5
 let aString = "Hello"
@@ -6,14 +6,14 @@ let aString = "Hello"
 let anIntSquared = anInt * anInt
 ```
 
-## snippet.0002.fs
+### [snippet.0002.fs](snippet.0002.fs)
 ```
 System.Console.WriteLine(anInt)
 System.Console.WriteLine(aString)
 System.Console.WriteLine(anIntSquared)
 ```
 
-## snippet.0003.fs
+### [snippet.0003.fs](snippet.0003.fs)
 ```
 let square n = n * n
 // Call the function to calculate the square of anInt, which has the value 5.
@@ -22,7 +22,7 @@ let result = square anInt
 System.Console.WriteLine(result)
 ```
 
-## snippet.0004.fs
+### [snippet.0004.fs](snippet.0004.fs)
 ```
 let rec factorial n =
     if n = 0
@@ -31,7 +31,7 @@ let rec factorial n =
 System.Console.WriteLine(factorial anInt)
 ```
 
-## snippet.0005.fs
+### [snippet.0005.fs](snippet.0005.fs)
 ```
 let turnChoices = ("right", "left")
 System.Console.WriteLine(turnChoices)
@@ -42,19 +42,19 @@ System.Console.WriteLine(intAndSquare)
 // Output: (5,25)
 ```
 
-## snippet.0007.fs
+### [snippet.0007.fs](snippet.0007.fs)
 ```
 // List of best friends.
 let bffs = [ "Susan"; "Kerry"; "Linda"; "Maria" ]
 ```
 
-## snippet.0008.fs
+### [snippet.0008.fs](snippet.0008.fs)
 ```
 // Bind newBffs to a new list that has "Katie" as its first element.
 let newBffs = "Katie" :: bffs
 ```
 
-## snippet.0009.fs
+### [snippet.0009.fs](snippet.0009.fs)
 ```
 printfn "%A" bffs
 // Output: ["Susan"; "Kerry"; "Linda"; "Maria"]
@@ -62,7 +62,7 @@ printfn "%A" newBffs
 // Output: ["Katie"; "Susan"; "Kerry"; "Linda"; "Maria"]
 ```
 
-## snippet.0010.fs
+### [snippet.0010.fs](snippet.0010.fs)
 ```
 // The declaration creates a constructor that takes two values, name and age.
 type Person(name:string, age:int) =
@@ -94,7 +94,7 @@ type Person(name:string, age:int) =
         "Name:  " + name + "\n" + "Age:   " + (string)internalAge
 ```
 
-## snippet.0011.fs
+### [snippet.0011.fs](snippet.0011.fs)
 ```
 // The following let expressions are not part of the Person class. Make sure
 // they begin at the left margin.
@@ -113,24 +113,24 @@ System.Console.WriteLine(person2.ToString())
 System.Console.WriteLine(person2.IsOfAge(18))
 ```
 
-## snippet.0020.fs
+### [snippet.0020.fs](snippet.0020.fs)
 ```
 // Integer and string.
 let num = 10
 let str = "F#"
 ```
 
-## snippet.0021.fs
+### [snippet.0021.fs](snippet.0021.fs)
 ```
 let squareIt = fun n -> n * n
 ```
 
-## snippet.0022.fs
+### [snippet.0022.fs](snippet.0022.fs)
 ```
 let squareIt2 n = n * n
 ```
 
-## snippet.0023.fs
+### [snippet.0023.fs](snippet.0023.fs)
 ```
 // Lists.
 
@@ -180,7 +180,7 @@ let funTuple = ( squareIt, BMICalculator )
 let moreMixedTuple = ( num, "two", 3.3, squareIt )
 ```
 
-## snippet.0024.fs
+### [snippet.0024.fs](snippet.0024.fs)
 ```
 // You can pull a function out of a tuple and apply it. Both squareIt and num
 // were defined previously.
@@ -191,7 +191,7 @@ let funAndArgTuple = (squareIt, num)
 System.Console.WriteLine((fst funAndArgTuple)(snd funAndArgTuple))
 ```
 
-## snippet.0025.fs
+### [snippet.0025.fs](snippet.0025.fs)
 ```
 // Make a tuple of values instead of identifiers.
 let funAndArgTuple2 = ((fun n -> n * n), 10)
@@ -201,7 +201,7 @@ let funAndArgTuple2 = ((fun n -> n * n), 10)
 System.Console.WriteLine((fst funAndArgTuple2)(snd funAndArgTuple2))
 ```
 
-## snippet.0026.fs
+### [snippet.0026.fs](snippet.0026.fs)
 ```
 // An integer is passed to squareIt. Both squareIt and num are defined in
 // previous examples.
@@ -218,7 +218,7 @@ let greeting = "Hello"
 System.Console.WriteLine(repeatString greeting)
 ```
 
-## snippet.0027.fs
+### [snippet.0027.fs](snippet.0027.fs)
 ```
 // Define the function, again using lambda expression syntax.
 let applyIt = fun op arg -> op arg
@@ -235,7 +235,7 @@ let applyIt2 op arg = op arg
 System.Console.WriteLine(applyIt2 squareIt num)
 ```
 
-## snippet.0028.fs
+### [snippet.0028.fs](snippet.0028.fs)
 ```
 // List integerList was defined previously:
 //let integerList = [ 1; 2; 3; 4; 5; 6; 7 ]
@@ -257,7 +257,7 @@ let evenOrNot = List.map (fun n -> n % 2 = 0) integerList
 printfn "%A" evenOrNot
 ```
 
-## snippet.0029.fs
+### [snippet.0029.fs](snippet.0029.fs)
 ```
 // Function doubleIt is defined in a previous example.
 //let doubleIt = fun n -> 2 * n
@@ -265,19 +265,19 @@ System.Console.WriteLine(doubleIt 3)
 System.Console.WriteLine(squareIt 4)
 ```
 
-## snippet.0030.fs
+### [snippet.0030.fs](snippet.0030.fs)
 ```
 // str is defined in a previous section.
 //let str = "F#"
 let lowercase = str.ToLower()
 ```
 
-## snippet.0031.fs
+### [snippet.0031.fs](snippet.0031.fs)
 ```
 System.Console.WriteLine((fun n -> n % 2 = 1) 15)
 ```
 
-## snippet.0032.fs
+### [snippet.0032.fs](snippet.0032.fs)
 ```
 let checkFor item =
     let functionToReturn = fun lst ->
@@ -285,7 +285,7 @@ let checkFor item =
     functionToReturn
 ```
 
-## snippet.0033.fs
+### [snippet.0033.fs](snippet.0033.fs)
 ```
 // integerList and stringList were defined earlier.
 //let integerList = [ 1; 2; 3; 4; 5; 6; 7 ]
@@ -304,7 +304,7 @@ let checkForSeven = checkFor "seven"
 System.Console.WriteLine(checkForSeven stringList)
 ```
 
-## snippet.0034.fs
+### [snippet.0034.fs](snippet.0034.fs)
 ```
 // Function compose takes two arguments. Each argument is a function
 // that takes one argument of the same type. The following declaration
@@ -330,7 +330,7 @@ let compose3 op1 op2 =
     funToReturn
 ```
 
-## snippet.0035.fs
+### [snippet.0035.fs](snippet.0035.fs)
 ```
 // Functions squareIt and doubleIt were defined in a previous example.
 let doubleAndSquare = compose squareIt doubleIt
@@ -344,7 +344,7 @@ let squareAndDouble = compose doubleIt squareIt
 System.Console.WriteLine(squareAndDouble 3)
 ```
 
-## snippet.0036.fs
+### [snippet.0036.fs](snippet.0036.fs)
 ```
 let makeGame target =
     // Build a lambda expression that is the function that plays the game.
@@ -357,7 +357,7 @@ let makeGame target =
     game
 ```
 
-## snippet.0037.fs
+### [snippet.0037.fs](snippet.0037.fs)
 ```
 let playGame = makeGame 7
 // Send in some guesses.
@@ -384,12 +384,12 @@ alphaGame 'q'
 // You win!
 ```
 
-## snippet.0038.fs
+### [snippet.0038.fs](snippet.0038.fs)
 ```
 let compose4 op1 op2 n = op1 (op2 n)
 ```
 
-## snippet.0039.fs
+### [snippet.0039.fs](snippet.0039.fs)
 ```
 let compose4curried =
     fun op1 ->
@@ -397,7 +397,7 @@ let compose4curried =
             fun n -> op1 (op2 n)
 ```
 
-## snippet.0040.fs
+### [snippet.0040.fs](snippet.0040.fs)
 ```
 // Access one layer at a time.
 System.Console.WriteLine(((compose4 doubleIt) squareIt) 3)
@@ -410,7 +410,7 @@ System.Console.WriteLine((compose4 doubleIt squareIt) 3)
 System.Console.WriteLine(compose4 doubleIt squareIt 3)
 ```
 
-## snippet.0041.fs
+### [snippet.0041.fs](snippet.0041.fs)
 ```
 let doubleAndSquare4 = compose4 squareIt doubleIt
 // The following expression returns and displays 36.
@@ -421,7 +421,7 @@ let squareAndDouble4 = compose4 doubleIt squareIt
 System.Console.WriteLine(squareAndDouble4 3)
 ```
 
-## snippet.0042.fs
+### [snippet.0042.fs](snippet.0042.fs)
 ```
 let makeGame2 target guess =
     if guess = target then
@@ -441,7 +441,7 @@ alphaGame2 'j'
 alphaGame2 'q'
 ```
 
-## snippet.0043.fs
+### [snippet.0043.fs](snippet.0043.fs)
 ```
 let isNegative = fun n -> n < 0
 
@@ -455,22 +455,22 @@ System.Console.WriteLine(applyIt isNegative num)
 System.Console.WriteLine(applyIt (fun n -> n < 0) 10)
 ```
 
-## snippet.0044.fs
+### [snippet.0044.fs](snippet.0044.fs)
 ```
 System.Console.WriteLine((fun op arg -> op arg) (fun n -> n < 0)  10)
 ```
 
-## snippet.0045.fs
+### [snippet.0045.fs](snippet.0045.fs)
 ```
 let funTuple2 = ( BMICalculator, fun n -> n * n )
 ```
 
-## snippet.0046.fs
+### [snippet.0046.fs](snippet.0046.fs)
 ```
 let increments = List.map (fun n -> n + 1) [ 1; 2; 3; 4; 5; 6; 7 ]
 ```
 
-## snippet.0047.fs
+### [snippet.0047.fs](snippet.0047.fs)
 ```
 // ** GIVE THE VALUE A NAME **
 

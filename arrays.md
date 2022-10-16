@@ -1,9 +1,9 @@
-#### [0001](snippet.0001.fs)
+### [snippet.0001.fs](snippet.0001.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 ```
 
-#### [0002](snippet.0002.fs)
+### [snippet.0002.fs](snippet.0002.fs)
 ```
 let array1 =
     [|
@@ -13,38 +13,37 @@ let array1 =
      |]
 ```
 
-#### [0003](snippet.0003.fs)
-
+### [snippet.0003.fs](snippet.0003.fs)
 ```
 let array3 = [| for i in 1 .. 10 -> i * i |]
 ```
 
-#### [0004](snippet.0004.fs)
+### [snippet.0004.fs](snippet.0004.fs)
 ```
 let arrayOfTenZeroes : int array = Array.zeroCreate 10
 ```
 
-#### [0005](snippet.0005.fs)
+### [snippet.0005.fs](snippet.0005.fs)
 ```
 array1[0]
 ```
 
-#### [0006](snippet.0006.fs)
+### [snippet.0006.fs](snippet.0006.fs)
 ```
 array1[0..2]
 ```
 
-#### [0007](snippet.0007.fs)
+### [snippet.0007.fs](snippet.0007.fs)
 ```
 array1[..2]
 ```
 
-#### [0008](snippet.0008.fs)
+### [snippet.0008.fs](snippet.0008.fs)
 ```
 array1[2..]
 ```
 
-#### [0009](snippet.0009.fs)
+### [snippet.0009.fs](snippet.0009.fs)
 ```
 let array1 = Array.create 10 ""
 for i in 0 .. array1.Length - 1 do
@@ -53,13 +52,13 @@ for i in 0 .. array1.Length - 1 do
     printf "%s " (Array.get array1 i)
 ```
 
-#### [0010](snippet.0010.fs)
+### [snippet.0010.fs](snippet.0010.fs)
 ```
 let myEmptyArray = Array.empty
 printfn "Length of empty array: %d" myEmptyArray.Length
 ```
 
-#### [0011](snippet.0011.fs)
+### [snippet.0011.fs](snippet.0011.fs)
 ```
 open System.Text
 
@@ -73,19 +72,19 @@ printfn "%A" firstArray
 printfn "%A" secondArray
 ```
 
-#### [0012](snippet.0012.fs)
+### [snippet.0012.fs](snippet.0012.fs)
 ```
 let a1 = [| 0 .. 99 |]
 let a2 = Array.sub a1 5 10
 printfn "%A" a2
 ```
 
-#### [0013](snippet.0013.fs)
+### [snippet.0013.fs](snippet.0013.fs)
 ```
 printfn "%A" (Array.append [| 1; 2; 3|] [| 4; 5; 6|])
 ```
 
-#### [0014](snippet.0014.fs)
+### [snippet.0014.fs](snippet.0014.fs)
 ```
 printfn "%A" (Array.choose (fun elem -> if elem % 2 = 0 then
                                             Some(float (elem*elem - 1))
@@ -93,12 +92,12 @@ printfn "%A" (Array.choose (fun elem -> if elem % 2 = 0 then
                                             None) [| 1 .. 10 |])
 ```
 
-#### [0015](snippet.0015.fs)
+### [snippet.0015.fs](snippet.0015.fs)
 ```
 printfn "%A" (Array.collect (fun elem -> [| 0 .. elem |]) [| 1; 5; 10|])
 ```
 
-#### [0016](snippet.0016.fs)
+### [snippet.0016.fs](snippet.0016.fs)
 ```
 Array.concat [ [|0..3|] ; [|4|] ]
 //output [|0; 1; 2; 3; 4|]
@@ -107,12 +106,12 @@ Array.concat [| [|0..3|] ; [|4|] |]
 //output [|0; 1; 2; 3; 4|]
 ```
 
-#### [0017](snippet.0017.fs)
+### [snippet.0017.fs](snippet.0017.fs)
 ```
 printfn "%A" (Array.filter (fun elem -> elem % 2 = 0) [| 1 .. 10|])
 ```
 
-#### [0018](snippet.0018.fs)
+### [snippet.0018.fs](snippet.0018.fs)
 ```
 let stringReverse (s: string) =
     System.String(Array.rev (s.ToCharArray()))
@@ -120,7 +119,7 @@ let stringReverse (s: string) =
 printfn "%A" (stringReverse("!dlrow olleH"))
 ```
 
-#### [0019](snippet.0019.fs)
+### [snippet.0019.fs](snippet.0019.fs)
 ```
 [| 1 .. 10 |]
 |> Array.filter (fun elem -> elem % 2 = 0)
@@ -129,23 +128,23 @@ printfn "%A" (stringReverse("!dlrow olleH"))
 |> printfn "%A"
 ```
 
-#### [0020](snippet.0020.fs)
+### [snippet.0020.fs](snippet.0020.fs)
 ```
 let my2DArray = array2D [ [ 1; 0]; [0; 1] ]
 ```
 
-#### [0021](snippet.0021.fs)
+### [snippet.0021.fs](snippet.0021.fs)
 ```
 let arrayOfArrays = [| [| 1.0; 0.0 |]; [|0.0; 1.0 |] |]
 let twoDimensionalArray = Array2D.init 2 2 (fun i j -> arrayOfArrays[i][j])
 ```
 
-#### [0022](snippet.0022.fs)
+### [snippet.0022.fs](snippet.0022.fs)
 ```
 twoDimensionalArray[0, 1] <- 1.0
 ```
 
-#### [0023](snippet.0023.fs)
+### [snippet.0023.fs](snippet.0023.fs)
 ```
 let allNegative = Array.exists (fun elem -> abs (elem) = elem) >> not
 printfn "%A" (allNegative [| -1; -2; -3 |])
@@ -157,7 +156,7 @@ let haveEqualElement = Array.exists2 (fun elem1 elem2 -> elem1 = elem2)
 printfn "%A" (haveEqualElement [| 1; 2; 3 |] [| 3; 2; 1|])
 ```
 
-#### [0024](snippet.0024.fs)
+### [snippet.0024.fs](snippet.0024.fs)
 ```
 let allPositive = Array.forall (fun elem -> elem > 0)
 printfn "%A" (allPositive [| 0; 1; 2; 3 |])
@@ -169,7 +168,7 @@ printfn "%A" (allEqual [| 1; 2 |] [| 1; 2 |])
 printfn "%A" (allEqual [| 1; 2 |] [| 2; 1 |])
 ```
 
-#### [0025](snippet.0025.fs)
+### [snippet.0025.fs](snippet.0025.fs)
 ```
 let arrayA = [| 2 .. 100 |]
 let delta = 1.0e-10
@@ -184,7 +183,7 @@ let index = Array.findIndex (fun elem -> isPerfectSquare elem && isPerfectCube e
 printfn "The first element that is both a square and a cube is %d and its index is %d." element index
 ```
 
-#### [0026](snippet.0026.fs)
+### [snippet.0026.fs](snippet.0026.fs)
 ```
 let delta = 1.0e-10
 let isPerfectSquare (x:int) =
@@ -204,7 +203,7 @@ lookForCubeAndSquare [| 100 .. 1000 |]
 lookForCubeAndSquare [| 2 .. 50 |]
 ```
 
-#### [0027](snippet.0027.fs)
+### [snippet.0027.fs](snippet.0027.fs)
 ```
 let findPerfectSquareAndCube array1 =
     let delta = 1.0e-10
@@ -237,20 +236,20 @@ findPerfectSquareAndCube [| 1000 .. 10000 |]
 findPerfectSquareAndCube [| 2 .. 50 |]
 ```
 
-#### [0028](snippet.0028.fs)
+### [snippet.0028.fs](snippet.0028.fs)
 ```
 let arrayFill1 = [| 1 .. 25 |]
 Array.fill arrayFill1 2 20 0
 printfn "%A" arrayFill1
 ```
 
-#### [0029](snippet.0029.fs)
+### [snippet.0029.fs](snippet.0029.fs)
 ```
 let avg2 = Array.averageBy (fun elem -> float elem) [|1 .. 10|]
 printfn "%f" avg2
 ```
 
-#### [0030](snippet.0030.fs)
+### [snippet.0030.fs](snippet.0030.fs)
 ```
 let array1 = [| 1 .. 10 |]
 let array2 = Array.zeroCreate 20
@@ -259,14 +258,14 @@ Array.blit array1 3 array2 5 4
 printfn "%A" array2
 ```
 
-#### [0031](snippet.0031.fs)
+### [snippet.0031.fs](snippet.0031.fs)
 ```
 let array1 = [| 1 .. 10 |]
 let array2 = Array.copy array1
 printfn "%A\n%A" array1 array2
 ```
 
-#### [0032](snippet.0032.fs)
+### [snippet.0032.fs](snippet.0032.fs)
 ```
 let sumArray array = Array.fold (fun acc elem -> acc + elem) 0 array
 printfn "Sum of the elements of array %A is %d." [ 1 .. 3 ] (sumArray [| 1 .. 3 |])
@@ -294,7 +293,7 @@ let printArray array = Array.fold (fun acc elem -> printfn "%A" elem) () array
 printArray [|0.0; 1.0; 2.5; 5.1 |]
 ```
 
-#### [0033](snippet.0033.fs)
+### [snippet.0033.fs](snippet.0033.fs)
 ```
 let removeOutliers array1 min max =
     Array.partition (fun elem -> elem > min && elem < max) array1
@@ -303,7 +302,7 @@ removeOutliers [| 1 .. 100 |] 50 60
 |> printf "%A"
 ```
 
-#### [0034](snippet.0034.fs)
+### [snippet.0034.fs](snippet.0034.fs)
 ```
 let printPermutation n array1 =
     let length = Array.length array1
@@ -318,7 +317,7 @@ for n in 0 .. 4 do
     printPermutation n array1
 ```
 
-#### [0035](snippet.0035.fs)
+### [snippet.0035.fs](snippet.0035.fs)
 ```
 let initialBalance = 1122.73
 let transactions = [| -100.00; +450.34; -62.34; -127.00; -13.50; -12.92 |]
@@ -336,7 +335,7 @@ for i in 0 .. transactions.Length - 1 do
 printfn "Final balance:\n $%10.2f" balances[ balances.Length - 1]
 ```
 
-#### [0036](snippet.0036.fs)
+### [snippet.0036.fs](snippet.0036.fs)
 ```
 // An array of functions that transform
 // integers. (int -> int)
@@ -366,19 +365,19 @@ compareOpOrder ops1 10
 compareOpOrder ops2 10
 ```
 
-#### [0037](snippet.0037.fs)
+### [snippet.0037.fs](snippet.0037.fs)
 ```
 let sortedArray1 = Array.sort [|1; 4; 8; -2; 5|]
 printfn "%A" sortedArray1
 ```
 
-#### [0038](snippet.0038.fs)
+### [snippet.0038.fs](snippet.0038.fs)
 ```
 let sortedArray2 = Array.sortBy (fun elem -> abs elem) [|1; 4; 8; -2; 5|]
 printfn "%A" sortedArray2
 ```
 
-#### [0039](snippet.0039.fs)
+### [snippet.0039.fs](snippet.0039.fs)
 ```
 type Widget = { ID: int; Rev: int }
 
@@ -402,21 +401,21 @@ let sortedWidgetArray = Array.sortWith compareWidgets arrayToSort
 printfn "%A" sortedWidgetArray
 ```
 
-#### [0040](snippet.0040.fs)
+### [snippet.0040.fs](snippet.0040.fs)
 ```
 let array1 = [|1; 4; 8; -2; 5|]
 Array.sortInPlace array1
 printfn "%A" array1
 ```
 
-#### [0041](snippet.0041.fs)
+### [snippet.0041.fs](snippet.0041.fs)
 ```
 let array1 = [|1; 4; 8; -2; 5|]
 Array.sortInPlaceBy (fun elem -> abs elem) array1
 printfn "%A" array1
 ```
 
-#### [0042](snippet.0042.fs)
+### [snippet.0042.fs](snippet.0042.fs)
 ```
 type Widget = { ID: int; Rev: int }
 
@@ -440,7 +439,7 @@ Array.sortInPlaceWith compareWidgets array1
 printfn "%A" array1
 ```
 
-#### [0043](snippet.0043.fs)
+### [snippet.0043.fs](snippet.0043.fs)
 ```
 let average1 = Array.average [| 1.0 .. 10.0 |]
 printfn "Average: %f" average1
@@ -450,7 +449,7 @@ let average2 = Array.averageBy (fun elem -> float elem) [|1 .. 10 |]
 printfn "Average: %f" average2
 ```
 
-#### [0044](snippet.0044.fs)
+### [snippet.0044.fs](snippet.0044.fs)
 ```
 // Specify the type by using a type argument.
 let array1 = Array.empty<int>
@@ -463,7 +462,7 @@ let array3 = Array.empty
 printfn "Length of empty array: %d" array3.Length
 ```
 
-#### [0045](snippet.0045.fs)
+### [snippet.0045.fs](snippet.0045.fs)
 ```
 // Use Array.fold2 to perform computations over two arrays (of equal size)
 // at the same time.
@@ -476,7 +475,7 @@ let sum = sumGreatest [| 1; 2; 3 |] [| 3; 2; 1 |]
 printfn "The sum of the greater of each pair of elements in the two arrays is %d." sum
 ```
 
-#### [0046](snippet.0046.fs)
+### [snippet.0046.fs](snippet.0046.fs)
 ```
 // This computes 3 - 2 - 1, which evalates to -6.
 let subtractArray array1 = Array.fold (fun acc elem -> acc - elem) 0 array1
@@ -487,7 +486,7 @@ let subtractArrayBack array1 = Array.foldBack (fun elem acc -> elem - acc) array
 printfn "%d" (subtractArrayBack [| 1; 2; 3 |])
 ```
 
-#### [0047](snippet.0047.fs)
+### [snippet.0047.fs](snippet.0047.fs)
 ```
 type Transaction =
     | Deposit
@@ -507,7 +506,7 @@ let endingBalance = Array.foldBack2 (fun elem1 elem2 acc ->
 printfn "Ending balance: $%.2f" endingBalance
 ```
 
-#### [0048](snippet.0048.fs)
+### [snippet.0048.fs](snippet.0048.fs)
 ```
 let printArray array1 =
     if (Array.isEmpty array1) then
@@ -520,7 +519,7 @@ printArray [| "test1"; "test2" |]
 printArray [| |]
 ```
 
-#### [0049](snippet.0049.fs)
+### [snippet.0049.fs](snippet.0049.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 let array2 = [| 4; 5; 6 |]
@@ -533,14 +532,14 @@ Array.iteri2 (fun i x y ->
             array1 array2
 ```
 
-#### [0050](snippet.0050.fs)
+### [snippet.0050.fs](snippet.0050.fs)
 ```
 Array.length [| 1 .. 100 |] |> printfn "Length: %d"
 Array.length [| |] |> printfn "Length: %d"
 Array.length [| 1 .. 2 .. 100 |] |> printfn "Length: %d"
 ```
 
-#### [0051](snippet.0051.fs)
+### [snippet.0051.fs](snippet.0051.fs)
 ```
 // Accesses elements from 0 to 2.
 
@@ -555,7 +554,7 @@ array1[..2]
 array1[2..]
 ```
 
-#### [0052](snippet.0052.fs)
+### [snippet.0052.fs](snippet.0052.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 let array2 = [| 4; 5; 6 |]
@@ -563,14 +562,14 @@ let arrayOfSums = Array.map2 (fun x y -> x + y) array1 array2
 printfn "%A" arrayOfSums
 ```
 
-#### [0053](snippet.0053.fs)
+### [snippet.0053.fs](snippet.0053.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 let newArray = Array.mapi (fun i x -> (i, x)) array1
 printfn "%A" newArray
 ```
 
-#### [0054](snippet.0054.fs)
+### [snippet.0054.fs](snippet.0054.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 let array2 = [| 4; 5; 6 |]
@@ -578,50 +577,50 @@ let arrayAddTimesIndex = Array.mapi2 (fun i x y -> (x + y) * i) array1 array2
 printfn "%A" arrayAddTimesIndex
 ```
 
-#### [0055](snippet.0055.fs)
+### [snippet.0055.fs](snippet.0055.fs)
 ```
 [| for x in -100 .. 100 -> 4 - x * x |]
 |> Array.max
 |> printfn "%A"
 ```
 
-#### [0056](snippet.0056.fs)
+### [snippet.0056.fs](snippet.0056.fs)
 ```
 [| -10.0 .. 10.0 |]
 |> Array.maxBy (fun x -> 1.0 - x * x)
 |> printfn "%A"
 ```
 
-#### [0057](snippet.0057.fs)
+### [snippet.0057.fs](snippet.0057.fs)
 ```
 [| for x in -100 .. 100 -> x * x - 4 |]
 |> Array.min
 |> printfn "%A"
 ```
 
-#### [0058](snippet.0058.fs)
+### [snippet.0058.fs](snippet.0058.fs)
 ```
 [| -10.0 .. 10.0 |]
 |> Array.minBy (fun x -> x * x - 1.0)
 |> printfn "%A"
 ```
 
-#### [0059](snippet.0059.fs)
+### [snippet.0059.fs](snippet.0059.fs)
 ```
 let array1 = Array.ofList [ 1 .. 10]
 ```
 
-#### [0060](snippet.0060.fs)
+### [snippet.0060.fs](snippet.0060.fs)
 ```
 let array1 = Array.ofSeq ( seq { 1 .. 10 } )
 ```
 
-#### [0061](snippet.0061.fs)
+### [snippet.0061.fs](snippet.0061.fs)
 ```
 let array1 = Array.ofSeq ( seq { 1 .. 10 } )
 ```
 
-#### [0062](snippet.0062.fs)
+### [snippet.0062.fs](snippet.0062.fs)
 ```
 let values = [| ("a", 1); ("b", 2); ("c", 3) |]
 
@@ -632,7 +631,7 @@ let resultPick = Array.pick (fun elem ->
 printfn "%A" resultPick
 ```
 
-#### [0063](snippet.0063.fs)
+### [snippet.0063.fs](snippet.0063.fs)
 ```
 // Computes ((1 - 2) - 3) - 4 = -8
 Array.reduce (fun elem acc -> elem - acc) [| 1; 2; 3; 4 |]
@@ -642,7 +641,7 @@ Array.reduceBack (fun elem acc -> elem - acc) [| 1; 2; 3; 4 |]
 |> printfn "%A"
 ```
 
-#### [0064](snippet.0064.fs)
+### [snippet.0064.fs](snippet.0064.fs)
 ```
 open System
 
@@ -661,7 +660,7 @@ printfn "After sorting: "
 array1 |> printfn "%A"
 ```
 
-#### [0065](snippet.0065.fs)
+### [snippet.0065.fs](snippet.0065.fs)
 ```
 open System
 
@@ -680,21 +679,21 @@ Array.sortWith sortFunction array1
 |> printfn "After sorting: \n%A"
 ```
 
-#### [0066](snippet.0066.fs)
+### [snippet.0066.fs](snippet.0066.fs)
 ```
 [| 1 .. 10 |]
 |> Array.sum
 |> printfn "Sum: %d"
 ```
 
-#### [0067](snippet.0067.fs)
+### [snippet.0067.fs](snippet.0067.fs)
 ```
 [| 1 .. 10 |]
 |> Array.sumBy (fun x -> x * x)
 |> printfn "Sum: %d"
 ```
 
-#### [0068](snippet.0068.fs)
+### [snippet.0068.fs](snippet.0068.fs)
 ```
 [| 1 .. 10 |]
 |> Array.toList
@@ -703,7 +702,7 @@ Array.sortWith sortFunction array1
 printfn ""
 ```
 
-#### [0069](snippet.0069.fs)
+### [snippet.0069.fs](snippet.0069.fs)
 ```
 [| 1 .. 10 |]
 |> Array.toSeq
@@ -712,14 +711,14 @@ printfn ""
 printfn ""
 ```
 
-#### [0070](snippet.0070.fs)
+### [snippet.0070.fs](snippet.0070.fs)
 ```
 let array1, array2 = Array.unzip [| (1, 2); (3, 4) |]
 printfn "%A" array1
 printfn "%A" array2
 ```
 
-#### [0071](snippet.0071.fs)
+### [snippet.0071.fs](snippet.0071.fs)
 ```
 let array1, array2, array3 = Array.unzip3 [| (1, 2,3 ); (3, 4, 5) |]
 printfn "%A" array1
@@ -727,7 +726,7 @@ printfn "%A" array2
 printfn "%A" array3
 ```
 
-#### [0072](snippet.0072.fs)
+### [snippet.0072.fs](snippet.0072.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 let array2 = [| -1; -2; -3 |]
@@ -735,7 +734,7 @@ let arrayZip = Array.zip array1 array2
 printfn "%A" arrayZip
 ```
 
-#### [0073](snippet.0073.fs)
+### [snippet.0073.fs](snippet.0073.fs)
 ```
 let array1 = [| 1; 2; 3 |]
 let array2 = [| -1; -2; -3 |]
@@ -744,7 +743,7 @@ let arrayZip3 = Array.zip3 array1 array2 array3
 printfn "%A" arrayZip3
 ```
 
-#### [0074](snippet.0074.fs)
+### [snippet.0074.fs](snippet.0074.fs)
 ```
 let binary n =
     let rec generateBinary n =
@@ -758,7 +757,7 @@ let resultArray = Array.distinct (binary 1024)
 printfn "%A" resultArray
 ```
 
-#### [0075](snippet.0075.fs)
+### [snippet.0075.fs](snippet.0075.fs)
 ```
 let array1 = [| 1 .. 10 |]
 
@@ -769,7 +768,7 @@ printfn "%A" (Array.chunkBySize 2 array1)
 printfn "%A" (Array.chunkBySize 3 array1)
 ```
 
-#### [0076](snippet.0076.fs)
+### [snippet.0076.fs](snippet.0076.fs)
 ```
 let inputArray = [| -5 .. 10 |]
 let printArray array1 = Array.iter (printf "%A ") array1; printfn ""
@@ -780,7 +779,7 @@ let arrayDistinctAbsoluteValue = Array.distinctBy (fun elem -> abs elem) inputAr
 arrayDistinctAbsoluteValue |> printArray
 ```
 
-#### [0091](snippet.0091.fs)
+### [snippet.0091.fs](snippet.0091.fs)
 ```
 let myEmptyArray = Array.empty
 printfn "Length of empty array: %d" myEmptyArray.Length
@@ -795,17 +794,17 @@ printfn "Array of squares: %A" (Array.init 10 (fun index -> index * index))
 let (myZeroArray : float array) = Array.zeroCreate 10
 ```
 
-#### [0100](snippet.0100.fs)
+### [snippet.0100.fs](snippet.0100.fs)
 ```
 printfn "Array of floats set to 5.0: %A" (Array.create 10 5.0)
 ```
 
-#### [0101](snippet.0101.fs)
+### [snippet.0101.fs](snippet.0101.fs)
 ```
 printfn "Array of squares: %A" (Array.init 10 (fun index -> index * index))
 ```
 
-#### [0114](snippet.0114.fs)
+### [snippet.0114.fs](snippet.0114.fs)
 ```
 let array1 = [| 1 .. 3 |]
 let array2 = [| 1; 2; 4; |]
@@ -830,7 +829,7 @@ let array4 = [| 1; 2; |]
 printfn "%A" (Array.compareWith (fun elem1 elem2 -> elem1 - elem2) array3 array4)
 ```
 
-#### [0115](snippet.0115.fs)
+### [snippet.0115.fs](snippet.0115.fs)
 ```
 let array1 = [| 1 .. 100 |]
 let printArray anarray =
@@ -843,7 +842,7 @@ let arrayResult = Array.countBy (fun elem ->
 printArray arrayResult
 ```
 
-#### [0231](snippet.0231.fs)
+### [snippet.0231.fs](snippet.0231.fs)
 ```
 let allNegative = Array.exists (fun elem -> abs (elem) = elem) >> not
 printfn "%A" (allNegative [| -1; -2; -3 |])
@@ -851,27 +850,27 @@ printfn "%A" (allNegative [| -10; -1; 5 |])
 printfn "%A" (allNegative [| 0 |])
 ```
 
-#### [0232](snippet.0232.fs)
+### [snippet.0232.fs](snippet.0232.fs)
 ```
 let haveEqualElement = Array.exists2 (fun elem1 elem2 -> elem1 = elem2)
 printfn "%A" (haveEqualElement [| 1; 2; 3 |] [| 3; 2; 1|])
 ```
 
-#### [0241](snippet.0241.fs)
+### [snippet.0241.fs](snippet.0241.fs)
 ```
 let allPositive = Array.forall (fun elem -> elem > 0)
 printfn "%A" (allPositive [| 0; 1; 2; 3 |])
 printfn "%A" (allPositive [| 1; 2; 3 |])
 ```
 
-#### [0242](snippet.0242.fs)
+### [snippet.0242.fs](snippet.0242.fs)
 ```
 let allEqual = Array.forall2 (fun elem1 elem2 -> elem1 = elem2)
 printfn "%A" (allEqual [| 1; 2 |] [| 1; 2 |])
 printfn "%A" (allEqual [| 1; 2 |] [| 2; 1 |])
 ```
 
-#### [0510](snippet.0510.fs)
+### [snippet.0510.fs](snippet.0510.fs)
 ```
 let data = [| 1; 2; 3; 4 |]
 let r1 = data |> Array.map (fun x -> x + 1)
@@ -882,7 +881,7 @@ let r3 = data |> Array.map (fun x -> (x, x))
 printfn "Converting to tupels by using map = %A" r3
 ```
 
-#### [0511](snippet.0511.fs)
+### [snippet.0511.fs](snippet.0511.fs)
 ```
 let array1 = [| 1 .. 10 |]
 let array2 = Array.empty

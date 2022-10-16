@@ -1,20 +1,20 @@
-## snippet.0001.fs
+### [snippet.0001.fs](snippet.0001.fs)
 ```
 // Sequence that has an increment.
 seq { 0 .. 10 .. 100 }
 ```
 
-## snippet.0002.fs
+### [snippet.0002.fs](snippet.0002.fs)
 ```
 seq { for i in 1 .. 10 -> i * i }
 ```
 
-## snippet.0003.fs
+### [snippet.0003.fs](snippet.0003.fs)
 ```
 seq { for i in 1 .. 10 -> i * i }
 ```
 
-## snippet.0004.fs
+### [snippet.0004.fs](snippet.0004.fs)
 ```
 let (height, width) = (10, 10)
 let coordinates = seq {
@@ -23,12 +23,12 @@ let coordinates = seq {
             (row, col, row*width + col) }
 ```
 
-## snippet.0005.fs
+### [snippet.0005.fs](snippet.0005.fs)
 ```
 seq { for n in 1 .. 100 do if isprime n then n }
 ```
 
-## snippet.0006.fs
+### [snippet.0006.fs](snippet.0006.fs)
 ```
 // Recursive isprime function.
 let isprime n =
@@ -41,7 +41,7 @@ for x in aSequence do
     printfn "%d" x
 ```
 
-## snippet.0007.fs
+### [snippet.0007.fs](snippet.0007.fs)
 ```
 let multiplicationTable =
     seq {
@@ -50,7 +50,7 @@ let multiplicationTable =
                 (i, j, i*j) }
 ```
 
-## snippet.0008.fs
+### [snippet.0008.fs](snippet.0008.fs)
 ```
 // Yield the values of a binary tree in a sequence.
 type Tree<'a> =
@@ -73,19 +73,19 @@ let seq1 = inorder mytree
 printfn "%A" seq1
 ```
 
-## snippet.0009.fs
+### [snippet.0009.fs](snippet.0009.fs)
 ```
 let seqEmpty = Seq.empty
 let seqOne = Seq.singleton 10
 ```
 
-## snippet.0010.fs
+### [snippet.0010.fs](snippet.0010.fs)
 ```
 let seqFirst5MultiplesOf10 = Seq.init 5 (fun n -> n * 10)
 Seq.iter (fun elem -> printf "%d " elem) seqFirst5MultiplesOf10
 ```
 
-## snippet.0011.fs
+### [snippet.0011.fs](snippet.0011.fs)
 ```
 // Convert an array to a sequence by using a cast.
 let seqFromArray1 = [| 1 .. 10 |] :> seq<int>
@@ -94,7 +94,7 @@ let seqFromArray1 = [| 1 .. 10 |] :> seq<int>
 let seqFromArray2 = [| 1 .. 10 |] |> Seq.ofArray
 ```
 
-## snippet.0012.fs
+### [snippet.0012.fs](snippet.0012.fs)
 ```
 open System
 
@@ -106,7 +106,7 @@ for i in 1 .. 10 do
 let seqCast = Seq.cast arr
 ```
 
-## snippet.0013.fs
+### [snippet.0013.fs](snippet.0013.fs)
 ```
 let seqInfinite =
     Seq.initInfinite (fun index ->
@@ -116,7 +116,7 @@ let seqInfinite =
 printfn "%A" seqInfinite
 ```
 
-## snippet.0014.fs
+### [snippet.0014.fs](snippet.0014.fs)
 ```
 let seq1 =
     0 // Initial state
@@ -143,7 +143,7 @@ printfn "\nThe sequence fib contains Fibonacci numbers."
 for x in fib do printf "%d " x
 ```
 
-## snippet.0015.fs
+### [snippet.0015.fs](snippet.0015.fs)
 ```
 // generateInfiniteSequence generates sequences of floating point
 // numbers. The sequences generated are computed from the fDenominator
@@ -207,7 +207,7 @@ let result3 = infiniteSum squaresSeries 0.0000001 1000000
 printfn "Result: %f pi*pi/6: %f" result3 (pi*pi/6.0)
 ```
 
-## snippet.0016.fs
+### [snippet.0016.fs](snippet.0016.fs)
 ```
 let mySeq = seq { for i in 1 .. 10 -> i*i }
 let truncatedSeq = Seq.truncate 5 mySeq
@@ -227,7 +227,7 @@ takenSeq |> printSeq
 takenSeq2 |> printSeq
 ```
 
-## snippet.0017.fs
+### [snippet.0017.fs](snippet.0017.fs)
 ```
 // takeWhile
 let mySeqLessThan10 = Seq.takeWhile (fun elem -> elem < 10) mySeq
@@ -242,7 +242,7 @@ let mySeqSkipWhileLessThan10 = Seq.skipWhile (fun elem -> elem < 10) mySeq
 mySeqSkipWhileLessThan10 |> printSeq
 ```
 
-## snippet.0018.fs
+### [snippet.0018.fs](snippet.0018.fs)
 ```
 let printSeq seq1 = Seq.iter (printf "%A ") seq1; printfn ""
 let seqPairwise = Seq.pairwise (seq { for i in 1 .. 10 -> i*i })
@@ -253,7 +253,7 @@ let seqDelta = Seq.map (fun elem -> snd elem - fst elem) seqPairwise
 printSeq seqDelta
 ```
 
-## snippet.0019.fs
+### [snippet.0019.fs](snippet.0019.fs)
 ```
 let sequence1 = seq { 1 .. 10 }
 let sequence2 = seq { 10 .. -1 .. 1 }
@@ -273,7 +273,7 @@ match compareResult1 with
 | _ -> failwith("Invalid comparison result.")
 ```
 
-## snippet.0020.fs
+### [snippet.0020.fs](snippet.0020.fs)
 ```
 let mySeq1 = seq { 1.. 100 }
 let printSeq seq1 =
@@ -286,7 +286,7 @@ let seqResult = Seq.countBy (fun elem ->
 printSeq seqResult
 ```
 
-## snippet.0021.fs
+### [snippet.0021.fs](snippet.0021.fs)
 ```
 let sequence = seq { 1 .. 100 }
 let printSeq seq1 = Seq.iter (printf "%A ") seq1; printfn ""
@@ -295,7 +295,7 @@ let sequences3 = Seq.groupBy (fun index ->
 sequences3 |> printSeq
 ```
 
-## snippet.0022.fs
+### [snippet.0022.fs](snippet.0022.fs)
 ```
 let binary n =
     let rec generateBinary n =
@@ -312,7 +312,7 @@ let resultSequence = Seq.distinct (binary 1024)
 printfn "%A" resultSequence
 ```
 
-## snippet.0023.fs
+### [snippet.0023.fs](snippet.0023.fs)
 ```
 let inputSequence = { -5 .. 10 }
 let printSeq seq1 = Seq.iter (printf "%A ") seq1
@@ -325,7 +325,7 @@ let seqDistinctAbsoluteValue = Seq.distinctBy (fun elem -> abs elem) inputSequen
 printSeq seqDistinctAbsoluteValue
 ```
 
-## snippet.0024.fs
+### [snippet.0024.fs](snippet.0024.fs)
 ```
 type ArrayContainer(start, finish) =
     let internalArray = [| start .. finish |]
@@ -345,12 +345,12 @@ let rangeArray = newArray.RangeArray
 rangeArray[0] <- 0
 ```
 
-## snippet.0025.fs
+### [snippet.0025.fs](snippet.0025.fs)
 ```
 printfn "%A" (Seq.append [| 1; 2; 3|] [ 4; 5; 6])
 ```
 
-## snippet.0026.fs
+### [snippet.0026.fs](snippet.0026.fs)
 ```
 // You can use Seq.average to average elements of a list, array, or sequence.
 let average1 = Seq.average [ 1.0 .. 10.0 ]
@@ -360,7 +360,7 @@ let average2 = Seq.averageBy (fun elem -> float elem) (seq { 1 .. 10 })
 printfn "Average: %f" average2
 ```
 
-## snippet.0027.fs
+### [snippet.0027.fs](snippet.0027.fs)
 ```
 // Recursive isprime function.
 let isPrime n =
@@ -375,7 +375,7 @@ for index in 1..5 do
     printfn "%d is prime." (Seq.nth (Seq.length cachedSeq - index) cachedSeq)
 ```
 
-## snippet.0028.fs
+### [snippet.0028.fs](snippet.0028.fs)
 ```
 let addNegations seq1 =
    Seq.collect (fun x -> seq { x; -x }) seq1
@@ -385,7 +385,7 @@ printfn ""
 addNegations [| 0; -4; 2; -12 |] |> Seq.iter (fun elem -> printf "%d " elem)
 ```
 
-## snippet.0029.fs
+### [snippet.0029.fs](snippet.0029.fs)
 ```
 // Using Seq.append to append an array to a list.
 let seq1to10 = Seq.append [1; 2; 3] [| 4; 5; 6; 7; 8; 9; 10 |]
@@ -396,7 +396,7 @@ printfn ""
 Seq.iter (fun elem -> printf "%d " elem) seqResult
 ```
 
-## snippet.0030.fs
+### [snippet.0030.fs](snippet.0030.fs)
 ```
 // Normally sequences are evaluated lazily.  In this case,
 // the sequence is created from a list, which is not evaluated
@@ -420,7 +420,7 @@ printfn "\nCubes:"
 seqCubes |> Seq.iter (fun x -> printf "%d " x)
 ```
 
-## snippet.0031.fs
+### [snippet.0031.fs](snippet.0031.fs)
 ```
 // Compare the output of this example with that of the previous.
 // Notice that Seq.delay delays the
@@ -443,7 +443,7 @@ printfn "\nCubes:"
 seqCubes |> Seq.iter (fun x -> printf "%d " x)
 ```
 
-## snippet.0032.fs
+### [snippet.0032.fs](snippet.0032.fs)
 ```
 // A generic empty sequence.
 let emptySeq1 = Seq.empty
@@ -451,7 +451,7 @@ let emptySeq1 = Seq.empty
 let emptySeq2 = Seq.empty<string>
 ```
 
-## snippet.0033.fs
+### [snippet.0033.fs](snippet.0033.fs)
 ```
 // Use Seq.exists to determine whether there is an element of a sequence
 // that satisfies a given Boolean expression.
@@ -462,7 +462,7 @@ let seq0to3 = seq {0 .. 3}
 printfn "For sequence %A, contains zero is %b" seq0to3 (containsNumber 0 seq0to3)
 ```
 
-## snippet.0034.fs
+### [snippet.0034.fs](snippet.0034.fs)
 ```
 // Use Seq.exists2 to compare elements in two sequences.
 // isEqualElement returns true if any elements at the same position in two supplied
@@ -476,7 +476,7 @@ else
     printfn "Sequences %A and %A do not have any equal elements that are at the same position." seq1to5 seq5to1
 ```
 
-## snippet.0035.fs
+### [snippet.0035.fs](snippet.0035.fs)
 ```
 let random = new System.Random()
 Seq.initInfinite (fun _ -> random.Next())
@@ -486,14 +486,14 @@ Seq.initInfinite (fun _ -> random.Next())
 printfn ""
 ```
 
-## snippet.0036.fs
+### [snippet.0036.fs](snippet.0036.fs)
 ```
 let isDivisibleBy number elem = elem % number = 0
 let result = Seq.find (isDivisibleBy 5) [ 1 .. 100 ]
 printfn "%d " result
 ```
 
-## snippet.0037.fs
+### [snippet.0037.fs](snippet.0037.fs)
 ```
 let seqA = [| 2 .. 100 |]
 let delta = 1.0e-10
@@ -508,7 +508,7 @@ let index = Seq.findIndex (fun elem -> isPerfectSquare elem && isPerfectCube ele
 printfn "The first element that is both a square and a cube is %d and its index is %d." element index
 ```
 
-## snippet.0038.fs
+### [snippet.0038.fs](snippet.0038.fs)
 ```
 let sumSeq sequence1 = Seq.fold (fun acc elem -> acc + elem) 0 sequence1
 Seq.init 10 (fun index -> index * index)
@@ -516,7 +516,7 @@ Seq.init 10 (fun index -> index * index)
 |> printfn "The sum of the elements is %d."
 ```
 
-## snippet.0039.fs
+### [snippet.0039.fs](snippet.0039.fs)
 ```
 // This function can be used on any sequence, so the same function
 // works with both lists and arrays.
@@ -525,7 +525,7 @@ printfn "%A" (allPositive [| 0; 1; 2; 3 |])
 printfn "%A" (allPositive [ 1; 2; 3 ])
 ```
 
-## snippet.0040.fs
+### [snippet.0040.fs](snippet.0040.fs)
 ```
 // This function can be used on any sequence, so the same function
 // works with both lists and arrays.
@@ -534,13 +534,13 @@ printfn "%A" (allEqual [| 1; 2 |] [| 1; 2 |])
 printfn "%A" (allEqual [ 1; 2 ] [ 2; 1 ])
 ```
 
-## snippet.0041.fs
+### [snippet.0041.fs](snippet.0041.fs)
 ```
 let headItem = Seq.head [| 1 .. 10 |]
 printfn "%d" headItem
 ```
 
-## snippet.0042.fs
+### [snippet.0042.fs](snippet.0042.fs)
 ```
 let emptySeq = Seq.empty
 let nonEmptySeq = seq { 1 .. 10 }
@@ -548,7 +548,7 @@ Seq.isEmpty emptySeq |> printfn "%b"
 Seq.isEmpty nonEmptySeq |> printfn "%b"
 ```
 
-## snippet.0043.fs
+### [snippet.0043.fs](snippet.0043.fs)
 ```
 let seq1 = [1; 2; 3]
 let seq2 = [4; 5; 6]
@@ -557,7 +557,7 @@ Seq.iteri(fun i x -> printfn "Seq.iteri: element %d is %d" i x) seq1
 Seq.iter2 (fun x y -> printfn "Seq.iter2: elements are %d %d" x y) seq1 seq2
 ```
 
-## snippet.0044.fs
+### [snippet.0044.fs](snippet.0044.fs)
 ```
 let table1 = seq { for i in 1 ..10 do
                       for j in 1 .. 10 ->
@@ -566,7 +566,7 @@ let table1 = seq { for i in 1 ..10 do
 Seq.length table1 |> printfn "Length: %d"
 ```
 
-## snippet.0045.fs
+### [snippet.0045.fs](snippet.0045.fs)
 ```
 let data = [(1,1,2001); (2,2,2004); (6,17,2009)]
 let seq1 =
@@ -577,7 +577,7 @@ let seq1 =
 for i in seq1 do printfn "%A" i
 ```
 
-## snippet.0046.fs
+### [snippet.0046.fs](snippet.0046.fs)
 ```
 let seq1 = [1; 2; 3]
 let seq2 = [4; 5; 6]
@@ -585,61 +585,61 @@ let sumSeq = Seq.map2 (fun x y -> x + y) seq1 seq2
 printfn "%A" sumSeq
 ```
 
-## snippet.0047.fs
+### [snippet.0047.fs](snippet.0047.fs)
 ```
 let seq1 = [1; 2; 3]
 let newSeq = Seq.mapi (fun i x -> (i, x)) seq1
 printfn "%A" newSeq
 ```
 
-## snippet.0048.fs
+### [snippet.0048.fs](snippet.0048.fs)
 ```
 [| for x in -100 .. 100 -> 4 - x * x |]
 |> Seq.max
 |> printfn "%A"
 ```
 
-## snippet.0056.fs
+### [snippet.0056.fs](snippet.0056.fs)
 ```
 [| -10.0 .. 10.0 |]
 |> Seq.maxBy (fun x -> 1.0 - x * x)
 |> printfn "%A"
 ```
 
-## snippet.0057.fs
+### [snippet.0057.fs](snippet.0057.fs)
 ```
 [| for x in -100 .. 100 -> x * x - 4 |]
 |> Seq.min
 |> printfn "%A"
 ```
 
-## snippet.0058.fs
+### [snippet.0058.fs](snippet.0058.fs)
 ```
 [| -10.0 .. 10.0 |]
 |> Seq.minBy (fun x -> x * x - 1.0)
 |> printfn "%A"
 ```
 
-## snippet.0059.fs
+### [snippet.0059.fs](snippet.0059.fs)
 ```
 let seq1 = [ -10 .. 10 ]
 Seq.nth 5 seq1
 |> printfn "The fifth element: %d"
 ```
 
-## snippet.0060.fs
+### [snippet.0060.fs](snippet.0060.fs)
 ```
 let seq1 = Array.init 10 (fun index -> index.ToString())
            |> Seq.ofArray
 ```
 
-## snippet.0061.fs
+### [snippet.0061.fs](snippet.0061.fs)
 ```
 let seq1 = List.init 10 (fun index -> index.ToString())
            |> Seq.ofList
 ```
 
-## snippet.0062.fs
+### [snippet.0062.fs](snippet.0062.fs)
 ```
 let valuesSeq = [ ("a", 1); ("b", 2); ("c", 3) ]
 
@@ -650,14 +650,14 @@ let resultPick = Seq.pick (fun elem ->
 printfn "%A" resultPick
 ```
 
-## snippet.0063.fs
+### [snippet.0063.fs](snippet.0063.fs)
 ```
 let names = [| "A"; "man"; "landed"; "on"; "the"; "moon" |]
 let sentence = names |> Seq.reduce (fun acc item -> acc + " " + item)
 printfn "sentence = %s" sentence
 ```
 
-## snippet.0064.fs
+### [snippet.0064.fs](snippet.0064.fs)
 ```
 let initialBalance = 1122.73
 let transactions = [| -100.00; +450.34; -62.34; -127.00; -13.50; -12.92 |]
@@ -676,12 +676,12 @@ for i in 0 .. transactions.Length - 1 do
 printfn "Final balance:\n $%10.2f" balances[ balances.Length - 1 ]
 ```
 
-## snippet.0065.fs
+### [snippet.0065.fs](snippet.0065.fs)
 ```
 let seq1 = Seq.singleton "zero"
 ```
 
-## snippet.0066.fs
+### [snippet.0066.fs](snippet.0066.fs)
 ```
 let seq1 = { 1 .. 10 }
 
@@ -692,7 +692,7 @@ printfn "%A" (Seq.chunkBySize 2 seq1)
 printfn "%A" (Seq.chunkBySize 3 seq1)
 ```
 
-## snippet.0170.fs
+### [snippet.0170.fs](snippet.0170.fs)
 ```
 let mySeq = seq { for i in 1 .. 10 -> i*i }
 let printSeq seq1 = Seq.iter (printf "%A ") seq1; printfn ""
@@ -700,7 +700,7 @@ let mySeqLessThan10 = Seq.takeWhile (fun elem -> elem < 10) mySeq
 mySeqLessThan10 |> printSeq
 ```
 
-## snippet.0171.fs
+### [snippet.0171.fs](snippet.0171.fs)
 ```
 let mySeq = seq { for i in 1 .. 10 -> i*i }
 let printSeq seq1 = Seq.iter (printf "%A ") seq1; printfn ""
@@ -708,7 +708,7 @@ let mySeqSkipFirst5 = Seq.skip 5 mySeq
 mySeqSkipFirst5 |> printSeq
 ```
 
-## snippet.0172.fs
+### [snippet.0172.fs](snippet.0172.fs)
 ```
 let mySeq = seq { for i in 1 .. 10 -> i*i }
 let printSeq seq1 = Seq.iter (printf "%A ") seq1; printfn ""
@@ -716,7 +716,7 @@ let mySeqSkipWhileLessThan10 = Seq.skipWhile (fun elem -> elem < 10) mySeq
 mySeqSkipWhileLessThan10 |> printSeq
 ```
 
-## snippet.0180.fs
+### [snippet.0180.fs](snippet.0180.fs)
 ```
 let seqNumbers = [ 1.0; 1.5; 2.0; 1.5; 1.0; 1.5 ] :> seq<float>
 let seqWindows = Seq.windowed 3 seqNumbers
@@ -729,7 +729,7 @@ printfn "\nMoving average: "
 printSeq seqMovingAverage
 ```
 
-## snippet.0201.fs
+### [snippet.0201.fs](snippet.0201.fs)
 ```
 let mySeq1 = seq { 1.. 100 }
 
@@ -745,7 +745,7 @@ let seqResult =
 printSeq seqResult
 ```
 
-## snippet.0202.fs
+### [snippet.0202.fs](snippet.0202.fs)
 ```
 let sequence = seq { 1 .. 100 }
 
@@ -761,13 +761,13 @@ let sequences3 =
 sequences3 |> printSeq
 ```
 
-## snippet.0203.fs
+### [snippet.0203.fs](snippet.0203.fs)
 ```
 let secondItem = seq { "foo"; "bar"; "baz" } |> Seq.item 1
 printfn "%s" secondItem
 ```
 
-## snippet.0204.fs
+### [snippet.0204.fs](snippet.0204.fs)
 ```
 let seq1 = seq { 1..10 }
 let seq2 = Seq.empty
@@ -781,7 +781,7 @@ printfn "%A" (Seq.tail seq1)
 printfn "%A" (Seq.tail seq2)
 ```
 
-## snippet.0205.fs
+### [snippet.0205.fs](snippet.0205.fs)
 ```
 let seq1 = seq { 1..10 }
 let seq2 = Seq.empty

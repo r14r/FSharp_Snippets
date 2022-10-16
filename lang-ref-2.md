@@ -1,4 +1,4 @@
-## snippet.3501.fs
+### [snippet.3501.fs](snippet.3501.fs)
 ```
 // This class has a primary constructor that takes three arguments
 // and an additional constructor that calls the primary constructor.
@@ -23,7 +23,7 @@ let myObject3 = MyClass(x0 = 7, y0 = 8, z0 = 9)
 let myObject4 = MyClass()
 ```
 
-## snippet.3502.fs
+### [snippet.3502.fs](snippet.3502.fs)
 ```
 type MyStruct =
     struct
@@ -36,7 +36,7 @@ type MyStruct =
 let myStructure1 = new MyStruct(1, 2, 3)
 ```
 
-## snippet.3503.fs
+### [snippet.3503.fs](snippet.3503.fs)
 ```
  // Executing side effects in the primary constructor and
 // additional constructors.
@@ -55,7 +55,7 @@ let person1 = new Person("Humberto Acevedo", 123458734)
 let person2 = new Person()
 ```
 
-## snippet.3504.fs
+### [snippet.3504.fs](snippet.3504.fs)
 ```
 type MyClass1(x) as this =
     // This use of the self identifier produces a warning - avoid.
@@ -65,14 +65,14 @@ type MyClass1(x) as this =
     member this.X = x
 ```
 
-## snippet.3505.fs
+### [snippet.3505.fs](snippet.3505.fs)
 ```
 type MyClass2(x : int) =
     member this.X = x
     new() as this = MyClass2(0) then printfn "Initializing with X = %d" this.X
 ```
 
-## snippet.3506.fs
+### [snippet.3506.fs](snippet.3506.fs)
 ```
  type Account() =
     let mutable balance = 0.0
@@ -100,7 +100,7 @@ let account1 = new Account(AccountNumber=8782108,
                            Balance=1543.33)
 ```
 
-## snippet.3507.fs
+### [snippet.3507.fs](snippet.3507.fs)
 ```
 type Account(accountNumber : int, ?first: string, ?last: string, ?bal : float) =
    let mutable balance = defaultArg bal 0.0
@@ -127,7 +127,7 @@ let account1 = new Account(8782108, bal = 543.33,
                           FirstName="Raman", LastName="Iyer")
 ```
 
-## snippet.3601.fs
+### [snippet.3601.fs](snippet.3601.fs)
 ```
 open System.Windows.Forms
 
@@ -139,7 +139,7 @@ form.Click.Add(fun evArgs -> System.Console.Beep())
 Application.Run(form)
 ```
 
-## snippet.3602.fs
+### [snippet.3602.fs](snippet.3602.fs)
 ```
 open System.Windows.Forms
 
@@ -159,7 +159,7 @@ form.MouseMove.Add(MouseMoveEventHandler)
 Application.Run(form)
 ```
 
-## snippet.3603.fs
+### [snippet.3603.fs](snippet.3603.fs)
 ```
 type MyType() =
     let myEvent = new Event<_>()
@@ -176,7 +176,7 @@ myMyType.AddHandlers()
 myMyType.Trigger("Event occurred.")
 ```
 
-## snippet.3604.fs
+### [snippet.3604.fs](snippet.3604.fs)
 ```
 let form = new Form(Text = "F# Windows Form",
                     Visible = true,
@@ -188,7 +188,7 @@ form.MouseMove
             evArgs.X, evArgs.Y, evArgs.X ^^^ evArgs.Y) )
 ```
 
-## snippet.3605.fs
+### [snippet.3605.fs](snippet.3605.fs)
 ```
 open System.Collections.Generic
 
@@ -211,7 +211,7 @@ classWithEvent.TestEvent("Hello World!")
 System.Console.ReadLine() |> ignore
 ```
 
-## snippet.3701.fs
+### [snippet.3701.fs](snippet.3701.fs)
 ```
 module MyModule1 =
 
@@ -231,7 +231,7 @@ module MyModule2 =
       printfn "%d" (obj1.G())
 ```
 
-## snippet.3702.fs
+### [snippet.3702.fs](snippet.3702.fs)
 ```
 // Define a new member method FromString on the type Int32.
 type System.Int32 with
@@ -247,7 +247,7 @@ let testFromString str =
 testFromString "500"
 ```
 
-## snippet.4001.fs
+### [snippet.4001.fs](snippet.4001.fs)
 ```
 type Vector(x: float, y : float) =
    member this.x = x
@@ -274,7 +274,7 @@ printfn "%s" (v3.ToString())
 printfn "%s" (v4.ToString())
 ```
 
-## snippet.4002.fs
+### [snippet.4002.fs](snippet.4002.fs)
 ```
 // Determine the highest common factor between
 // two positive integers, a helper for reducing
@@ -364,13 +364,13 @@ printfn "%s / %s = %s" (fraction1.ToString()) (fraction2.ToString()) (result4.To
 printfn "%s + 1 = %s" (fraction1.ToString()) (result5.ToString())
 ```
 
-## snippet.4003.fs
+### [snippet.4003.fs](snippet.4003.fs)
 ```
 let inline (+?) (x: int) (y: int) = x + 2*y
 printf "%d" (10 +? 1)
 ```
 
-## snippet.4101.fs
+### [snippet.4101.fs](snippet.4101.fs)
 ```
 let iterate1 (f : unit -> seq<int>) =
     for e in f() do printfn "%d" e
@@ -385,7 +385,7 @@ iterate1 (fun () -> [1] :> seq<int>)
 iterate2 (fun () -> [1])
 ```
 
-## snippet.4102.fs
+### [snippet.4102.fs](snippet.4102.fs)
 ```
 let list1 = [1;2;3]
 let list2 = [4;5;6]
@@ -416,7 +416,7 @@ let concat5 = Seq.concat [| seq1; seq2; seq3 |]
 printfn "%A" concat5
 ```
 
-## snippet.4201.fs
+### [snippet.4201.fs](snippet.4201.fs)
 ```
 type Test1() =
   static member add(a : int, b : int) =
@@ -458,7 +458,7 @@ for (a, b) in [ (100, 200); (10, 20) ] do
   printfn "%d + %d = %d" a b (InvokeDelegate2 del4 a b)
 ```
 
-## snippet.4202.fs
+### [snippet.4202.fs](snippet.4202.fs)
 ```
 type Delegate1 = delegate of int * char -> string
 
@@ -486,7 +486,7 @@ let stringArray = System.Array.ConvertAll([|'a';'b'|], fun c -> replicate' 3 c)
 printfn "%A" stringArray
 ```
 
-## snippet.4301.fs
+### [snippet.4301.fs](snippet.4301.fs)
 ```
 // This object expression specifies a System.Object but overrides the
 // ToString method.
@@ -524,14 +524,14 @@ let Implementer() = { new ISecond with
                     }
 ```
 
-## snippet.4401.fs
+### [snippet.4401.fs](snippet.4401.fs)
 ```
 let x : int = 5
 
 let b : byte = byte x
 ```
 
-## snippet.4402.fs
+### [snippet.4402.fs](snippet.4402.fs)
 ```
 type Color =
     | Red = 1
@@ -545,7 +545,7 @@ let col1 = enum<Color> 1
 let col2 : Color = enum 2
 ```
 
-## snippet.4403.fs
+### [snippet.4403.fs](snippet.4403.fs)
 ```
 type Base1() =
     abstract member F : unit -> unit
@@ -578,7 +578,7 @@ let downcastBase1 (b1 : Base1) =
 downcastBase1 base1
 ```
 
-## snippet.4501.fs
+### [snippet.4501.fs](snippet.4501.fs)
 ```
 let test x y =
   if x = y then "equals"
@@ -598,7 +598,7 @@ if age < 10 then
     printfn "You are only %d years old and already learning F#? Wow!" age
 ```
 
-## snippet.4601.fs
+### [snippet.4601.fs](snippet.4601.fs)
 ```
 let list1 = [ 1; 5; 100; 450; 788 ]
 
@@ -624,7 +624,7 @@ let filterNumbers =
              | a -> printfn "%d" a
 ```
 
-## snippet.4602.fs
+### [snippet.4602.fs](snippet.4602.fs)
 ```
 let rangeTest testValue mid size =
     match testValue with
@@ -636,7 +636,7 @@ rangeTest 10 20 10
 rangeTest 10 20 40
 ```
 
-## snippet.4603.fs
+### [snippet.4603.fs](snippet.4603.fs)
 ```
 // This example uses patterns that have when guards.
 let detectValue point target =
@@ -651,7 +651,7 @@ detectValue (0, 10) 0
 detectValue (10, 15) 0
 ```
 
-## snippet.4801.fs
+### [snippet.4801.fs](snippet.4801.fs)
 ```
 [<Literal>]
 let Three = 3
@@ -666,7 +666,7 @@ let filter123 x =
 for x in 1..10 do filter123 x
 ```
 
-## snippet.4802.fs
+### [snippet.4802.fs](snippet.4802.fs)
 ```
 type Color =
     | Red = 0
@@ -685,7 +685,7 @@ printColorName Color.Green
 printColorName Color.Blue
 ```
 
-## snippet.4803.fs
+### [snippet.4803.fs](snippet.4803.fs)
 ```
 let printOption (data : int option) =
     match data with
@@ -693,7 +693,7 @@ let printOption (data : int option) =
     | None -> ()
 ```
 
-## snippet.4804.fs
+### [snippet.4804.fs](snippet.4804.fs)
 ```
 type PersonName =
     | FirstOnly of string
@@ -707,7 +707,7 @@ let constructQuery personName =
     | FirstLast(firstName, lastName) -> printf "Are you %s %s?" firstName lastName
 ```
 
-## snippet.4805.fs
+### [snippet.4805.fs](snippet.4805.fs)
 ```
 let function1 x =
     match x with
@@ -720,13 +720,13 @@ function1 (2, 1)
 function1 (0, 0)
 ```
 
-## snippet.4806.fs
+### [snippet.4806.fs](snippet.4806.fs)
 ```
 let (var1, var2) as tuple1 = (1, 2)
 printfn "%d %d %A" var1 var2 tuple1
 ```
 
-## snippet.4807.fs
+### [snippet.4807.fs](snippet.4807.fs)
 ```
 let detectZeroOR point =
     match point with
@@ -738,7 +738,7 @@ detectZeroOR (0, 10)
 detectZeroOR (10, 15)
 ```
 
-## snippet.4808.fs
+### [snippet.4808.fs](snippet.4808.fs)
 ```
 let detectZeroAND point =
     match point with
@@ -752,7 +752,7 @@ detectZeroAND (0, 10)
 detectZeroAND (10, 15)
 ```
 
-## snippet.4809.fs
+### [snippet.4809.fs](snippet.4809.fs)
 ```
 let list1 = [ 1; 2; 3; 4 ]
 
@@ -765,7 +765,7 @@ let rec printList l =
 printList list1
 ```
 
-## snippet.4810.fs
+### [snippet.4810.fs](snippet.4810.fs)
 ```
 // This example uses a list pattern.
 let listLength list =
@@ -782,7 +782,7 @@ printfn "%d" (listLength [ 1; 1; 1; ])
 printfn "%d" (listLength [ ] )
 ```
 
-## snippet.4811.fs
+### [snippet.4811.fs](snippet.4811.fs)
 ```
 // This example uses array patterns.
 let vectorLength vec =
@@ -798,7 +798,7 @@ printfn "%f" (vectorLength [| 1.; 1.; 1.; |])
 printfn "%f" (vectorLength [| |] )
 ```
 
-## snippet.4812.fs
+### [snippet.4812.fs](snippet.4812.fs)
 ```
 let countValues list value =
     let rec checkList list acc =
@@ -812,7 +812,7 @@ let result = countValues [ for x in -10..10 -> x*x - 4 ] 0
 printfn "%d" result
 ```
 
-## snippet.4813.fs
+### [snippet.4813.fs](snippet.4813.fs)
 ```
 let detectZeroTuple point =
     match point with
@@ -826,7 +826,7 @@ detectZeroTuple (0, 10)
 detectZeroTuple (10, 15)
 ```
 
-## snippet.4814.fs
+### [snippet.4814.fs](snippet.4814.fs)
 ```
 // This example uses a record pattern.
 
@@ -842,7 +842,7 @@ let isMatched1 = IsMatchByName recordX "Parker"
 let isMatched2 = IsMatchByName recordX "Hartono"
 ```
 
-## snippet.4815.fs
+### [snippet.4815.fs](snippet.4815.fs)
 ```
 let detect1 x =
     match x with
@@ -852,7 +852,7 @@ detect1 0
 detect1 1
 ```
 
-## snippet.4816.fs
+### [snippet.4816.fs](snippet.4816.fs)
 ```
 open System.Windows.Forms
 
@@ -863,7 +863,7 @@ let RegisterControl(control:Control) =
     | _ -> ()
 ```
 
-## snippet.4817.fs
+### [snippet.4817.fs](snippet.4817.fs)
 ```
 let ReadFromFile (reader : System.IO.StreamReader) =
     match reader.ReadLine() with
@@ -876,12 +876,12 @@ while ReadFromFile(sr) = true do ()
 sr.Close()
 ```
 
-## snippet.5001.fs
+### [snippet.5001.fs](snippet.5001.fs)
 ```
 let (|Even|Odd|) input = if input % 2 = 0 then Even else Odd
 ```
 
-## snippet.5002.fs
+### [snippet.5002.fs](snippet.5002.fs)
 ```
 let TestNumber input =
    match input with
@@ -893,7 +893,7 @@ TestNumber 11
 TestNumber 32
 ```
 
-## snippet.5003.fs
+### [snippet.5003.fs](snippet.5003.fs)
 ```
 open System.Drawing
 
@@ -923,7 +923,7 @@ printAll Color.Gray "Gray"
 printAll Color.BlanchedAlmond "BlanchedAlmond"
 ```
 
-## snippet.5004.fs
+### [snippet.5004.fs](snippet.5004.fs)
 ```
 let (|Integer|_|) (str: string) =
    let mutable intvalue = 0
@@ -948,7 +948,7 @@ parseNumeric "10"
 parseNumeric "Something else"
 ```
 
-## snippet.5005.fs
+### [snippet.5005.fs](snippet.5005.fs)
 ```
 let err = 1.e-10
 
@@ -972,7 +972,7 @@ let findSquareCubes x =
 [ 1 .. 1000 ] |> List.iter (fun elem -> findSquareCubes elem)
 ```
 
-## snippet.5006.fs
+### [snippet.5006.fs](snippet.5006.fs)
 ```
 open System.Text.RegularExpressions
 
@@ -1007,7 +1007,7 @@ let dt4 = parseDate "1995-12-28"
 printfn "%s %s %s %s" (dt1.ToString()) (dt2.ToString()) (dt3.ToString()) (dt4.ToString())
 ```
 
-## snippet.5007.fs
+### [snippet.5007.fs](snippet.5007.fs)
 ```
 let (|Default|) onNone value =
     match value with
@@ -1021,7 +1021,7 @@ greet None
 greet (Some "George")
 ```
 
-## snippet.5008.fs
+### [snippet.5008.fs](snippet.5008.fs)
 ```
 // A single-case partial active pattern can be parameterized
 let (| Foo|_|) s x = if x = s then Some Foo else None
@@ -1029,7 +1029,7 @@ let (| Foo|_|) s x = if x = s then Some Foo else None
 // let (| Even|Odd|Special |) (s: int) (x: int) = if x = s then Special elif x % 2 = 0 then Even else Odd
 ```
 
-## snippet.5101.fs
+### [snippet.5101.fs](snippet.5101.fs)
 ```
 // A simple for...to loop.
 let function1() =
@@ -1058,7 +1058,7 @@ let function3 x y =
 function3 10 4
 ```
 
-## snippet.5201.fs
+### [snippet.5201.fs](snippet.5201.fs)
 ```
 // Looping over a list.
 let list1 = [ 1; 5; 100; 450; 788 ]
@@ -1066,14 +1066,14 @@ for i in list1 do
    printfn "%d" i
 ```
 
-## snippet.5202.fs
+### [snippet.5202.fs](snippet.5202.fs)
 ```
 let seq1 = seq { for i in 1 .. 10 -> (i, i*i) }
 for (a, asqr) in seq1 do
   printfn "%d squared is %d" a asqr
 ```
 
-## snippet.5203.fs
+### [snippet.5203.fs](snippet.5203.fs)
 ```
 let function1() =
   for i in 1 .. 10 do
@@ -1082,7 +1082,7 @@ let function1() =
 function1()
 ```
 
-## snippet.5204.fs
+### [snippet.5204.fs](snippet.5204.fs)
 ```
 let function2() =
   for i in 1 .. 2 .. 10 do
@@ -1091,7 +1091,7 @@ let function2() =
 function2()
 ```
 
-## snippet.5205.fs
+### [snippet.5205.fs](snippet.5205.fs)
 ```
 let function3() =
   for c in 'a' .. 'z' do
@@ -1100,7 +1100,7 @@ let function3() =
 function3()
 ```
 
-## snippet.5206.fs
+### [snippet.5206.fs](snippet.5206.fs)
 ```
 let beginning x y = x - 2*y
 let ending x y = x + 2*y
@@ -1113,7 +1113,7 @@ let function5 x y =
 function5 10 4
 ```
 
-## snippet.5207.fs
+### [snippet.5207.fs](snippet.5207.fs)
 ```
 let mutable count = 0
 for _ in list1 do
@@ -1121,7 +1121,7 @@ for _ in list1 do
 printfn "Number of elements in list1: %d" count
 ```
 
-## snippet.5208.fs
+### [snippet.5208.fs](snippet.5208.fs)
 ```
 let function4() =
     for i in 10 .. -1 .. 1 do
@@ -1130,7 +1130,7 @@ let function4() =
 function4()
 ```
 
-## snippet.5301.fs
+### [snippet.5301.fs](snippet.5301.fs)
 ```
 open System
 
@@ -1148,7 +1148,7 @@ let lookForValue value maxValue =
 lookForValue 10 20
 ```
 
-## snippet.5401.fs
+### [snippet.5401.fs](snippet.5401.fs)
 ```
 let subtractUnsigned (x : uint32) (y : uint32) =
     assert (x > y)
@@ -1160,17 +1160,17 @@ let result1 = subtractUnsigned 2u 1u
 let result2 = subtractUnsigned 1u 2u
 ```
 
-## snippet.5501.fs
+### [snippet.5501.fs](snippet.5501.fs)
 ```
 exception MyError of string
 ```
 
-## snippet.5502.fs
+### [snippet.5502.fs](snippet.5502.fs)
 ```
 raise (MyError("Error message"))
 ```
 
-## snippet.5503.fs
+### [snippet.5503.fs](snippet.5503.fs)
 ```
 exception Error1 of string
 // Using a tuple type as the argument type.
@@ -1188,7 +1188,7 @@ function1 10 10
 function1 9 2
 ```
 
-## snippet.5601.fs
+### [snippet.5601.fs](snippet.5601.fs)
 ```
 let divide1 x y =
    try
@@ -1199,7 +1199,7 @@ let divide1 x y =
 let result1 = divide1 100 0
 ```
 
-## snippet.5602.fs
+### [snippet.5602.fs](snippet.5602.fs)
 ```
 // This example shows the use of the as keyword to assign a name to a
 // .NET exception.
@@ -1236,7 +1236,7 @@ function1 10 10
 function1 9 2
 ```
 
-## snippet.5701.fs
+### [snippet.5701.fs](snippet.5701.fs)
 ```
 let divide x y =
    let stream : System.IO.FileStream = System.IO.File.Create("test.txt")
@@ -1256,7 +1256,7 @@ let result =
      | :? System.DivideByZeroException -> printfn "Exception handled."; None
 ```
 
-## snippet.5702.fs
+### [snippet.5702.fs](snippet.5702.fs)
 ```
 exception InnerError of string
 exception OuterError of string
@@ -1282,7 +1282,7 @@ function2 100 100
 function2 100 10
 ```
 
-## snippet.5801.fs
+### [snippet.5801.fs](snippet.5801.fs)
 ```
 exception InnerError of string
 exception OuterError of string
@@ -1308,7 +1308,7 @@ function2 100 100
 function2 100 10
 ```
 
-## snippet.5802.fs
+### [snippet.5802.fs](snippet.5802.fs)
 ```
 let divide x y =
   if (y = 0) then raise (System.ArgumentException("Divisor cannot be zero!"))
@@ -1316,7 +1316,7 @@ let divide x y =
      x / y
 ```
 
-## snippet.6001.fs
+### [snippet.6001.fs](snippet.6001.fs)
 ```
 let divideFailwith x y =
   if (y = 0) then failwith "Divisor cannot be zero."
@@ -1332,7 +1332,7 @@ let testDivideFailwith x y =
 let result1 = testDivideFailwith 100 0
 ```
 
-## snippet.6101.fs
+### [snippet.6101.fs](snippet.6101.fs)
 ```
 let months = [| "January"; "February"; "March"; "April";
                 "May"; "June"; "July"; "August"; "September";
@@ -1348,7 +1348,7 @@ printfn "%s" (lookupMonth 1)
 printfn "%s" (lookupMonth 13)
 ```
 
-## snippet.6202.fs
+### [snippet.6202.fs](snippet.6202.fs)
 ```
 open System.Runtime.InteropServices
 
@@ -1356,7 +1356,7 @@ open System.Runtime.InteropServices
 extern bool CloseHandle(nativeint handle)
 ```
 
-## snippet.6301.fs
+### [snippet.6301.fs](snippet.6301.fs)
 ```
 open System.IO
 
@@ -1368,7 +1368,7 @@ let writetofile filename obj =
 writetofile "abc.txt" "Humpty Dumpty sat on a wall."
 ```
 
-## snippet.6302.fs
+### [snippet.6302.fs](snippet.6302.fs)
 ```
 open System.IO
 
@@ -1380,7 +1380,7 @@ let writetofile2 filename obj =
 writetofile2 "abc2.txt" "The quick sly fox jumps over the lazy brown dog."
 ```
 
-## snippet.6303.fs
+### [snippet.6303.fs](snippet.6303.fs)
 ```
 let printToFile (file1 : System.IO.StreamWriter) =
     file1.WriteLine("Test output");
@@ -1388,7 +1388,7 @@ let printToFile (file1 : System.IO.StreamWriter) =
 using (System.IO.File.CreateText("test.txt")) printToFile
 ```
 
-## snippet.6304.fs
+### [snippet.6304.fs](snippet.6304.fs)
 ```
 let printToFile2 obj (file1 : System.IO.StreamWriter) =
     file1.WriteLine(obj.ToString())
@@ -1396,7 +1396,7 @@ let printToFile2 obj (file1 : System.IO.StreamWriter) =
 using (System.IO.File.CreateText("test.txt")) (printToFile2 "XYZ")
 ```
 
-## snippet.6401.fs
+### [snippet.6401.fs](snippet.6401.fs)
 ```
 module Widgets.WidgetModule
 
@@ -1404,7 +1404,7 @@ let widgetFunction x y =
    printfn "%A %A" x y
 ```
 
-## snippet.6403.fs
+### [snippet.6403.fs](snippet.6403.fs)
 ```
 namespace Widgets
 
@@ -1422,7 +1422,7 @@ module useWidgets =
      WidgetModule2.widgetFunction 5 6
 ```
 
-## snippet.6404.fs
+### [snippet.6404.fs](snippet.6404.fs)
 ```
 namespace Outer
 
@@ -1438,7 +1438,7 @@ namespace Outer.Inner
        member this.Prop1 = "X"
 ```
 
-## snippet.6406.fs
+### [snippet.6406.fs](snippet.6406.fs)
 ```
 namespace Widgets
 
@@ -1449,7 +1449,7 @@ module WidgetsModule =
     let widgetName = "Widget2"
 ```
 
-## snippet.6407.fs
+### [snippet.6407.fs](snippet.6407.fs)
 ```
 namespace global
 
@@ -1457,25 +1457,25 @@ type SomeType() =
     member this.SomeMember = 0
 ```
 
-## snippet.6408.fs
+### [snippet.6408.fs](snippet.6408.fs)
 ```
 global.System.Console.WriteLine("Hello World!")
 ```
 
-## snippet.6603.fs
+### [snippet.6603.fs](snippet.6603.fs)
 ```
 [<Owner("Jason Carlson")>]
 [<Company("Microsoft")>]
 type SomeType1 =
 ```
 
-## snippet.6604.fs
+### [snippet.6604.fs](snippet.6604.fs)
 ```
 [<Owner("Darren Parker"); Company("Microsoft")>]
 type SomeType2 =
 ```
 
-## snippet.6605.fs
+### [snippet.6605.fs](snippet.6605.fs)
 ```
 open System
 
@@ -1491,7 +1491,7 @@ let result1 = obsoleteFunction 10 100
 let result2 = newFunction 10 100
 ```
 
-## snippet.6606.fs
+### [snippet.6606.fs](snippet.6606.fs)
 ```
 open System.Reflection
 [<assembly:AssemblyVersionAttribute("1.0.0.0")>]
@@ -1500,7 +1500,7 @@ do
    printfn "Executing..."
 ```
 
-## snippet.6701.fs
+### [snippet.6701.fs](snippet.6701.fs)
 ```
 type MyType() =
     let mutable myInt1 = 10
@@ -1522,7 +1522,7 @@ myObject.myString <- "def"
 printfn "%d %s" (myObject.myInt2) (myObject.myString)
 ```
 
-## snippet.6702.fs
+### [snippet.6702.fs](snippet.6702.fs)
 ```
 type MyClass =
     val a : int
@@ -1537,7 +1537,7 @@ let myClassObj = new MyClass(35, 22)
 printfn "%d %d" (myClassObj.a) (myClassObj.b)
 ```
 
-## snippet.6703.fs
+### [snippet.6703.fs](snippet.6703.fs)
 ```
 type MyStruct =
     struct
@@ -1552,7 +1552,7 @@ myStructObj.myString <- "xyz"
 printfn "%d %s" (myStructObj.myInt) (myStructObj.myString)
 ```
 
-## snippet.6704.fs
+### [snippet.6704.fs](snippet.6704.fs)
 ```
 [<Struct>]
 type Foo =
@@ -1569,7 +1569,7 @@ foo'.ChangeBar "2" //changes foo'
 printfn "%s" foo'.bar //prints 2
 ```
 
-## snippet.6801.fs
+### [snippet.6801.fs](snippet.6801.fs)
 ```
 // Without the import declaration, you must include the full
 // path to .NET Framework namespaces such as System.IO.
@@ -1590,7 +1590,7 @@ let writeToFile2 filename (text: string) =
 writeToFile2 "file1.txt" "Testing..."
 ```
 
-## snippet.6901.fs
+### [snippet.6901.fs](snippet.6901.fs)
 ```
 // Mass, grams.
 [<Measure>] type g
@@ -1638,7 +1638,7 @@ let convertGramsToKilograms (x : float<g>) = x / gramsPerKilogram
 let convertCentimetersToInches (x : float<cm>) = x / cmPerInch
 ```
 
-## snippet.6902.fs
+### [snippet.6902.fs](snippet.6902.fs)
 ```
 [<Measure>] type degC // temperature, Celsius/Centigrade
 [<Measure>] type degF // temperature, Fahrenheit
@@ -1660,7 +1660,7 @@ if parsedOk
       printfn "Error parsing input."
 ```
 
-## snippet.6903.fs
+### [snippet.6903.fs](snippet.6903.fs)
 ```
 // Distance, meters.
 [<Measure>] type m
@@ -1681,7 +1681,7 @@ let result1 = genericSumUnits v1 v2
 // let result2 = genericSumUnits v1 x1
 ```
 
-## snippet.6904.fs
+### [snippet.6904.fs](snippet.6904.fs)
 ```
  // Distance, meters.
 [<Measure>] type m
@@ -1699,7 +1699,7 @@ let xvec : vector3D<m> = { x = 0.0<m>; y = 0.0<m>; z = 0.0<m> }
 let v1vec : vector3D<m/s> = { x = 1.0<m/s>; y = -1.0<m/s>; z = 0.0<m/s> }
 ```
 
-## snippet.6905.fs
+### [snippet.6905.fs](snippet.6905.fs)
 ```
 [<Measure>]
 type cm
@@ -1707,13 +1707,13 @@ let length = 12.0<cm>
 let x = float length
 ```
 
-## snippet.6906.fs
+### [snippet.6906.fs](snippet.6906.fs)
 ```
 open Microsoft.FSharp.Core
 let height:float<cm> = LanguagePrimitives.FloatWithMeasure x
 ```
 
-## snippet.7001.fs
+### [snippet.7001.fs](snippet.7001.fs)
 ```
 // Program.fs
 open Module1
@@ -1733,7 +1733,7 @@ let trace1 = trace {
 let result = trace1()
 ```
 
-## snippet.7002.fs
+### [snippet.7002.fs](snippet.7002.fs)
 ```
 // Module1.fs
 module Module1 =
@@ -1762,7 +1762,7 @@ module Module1 =
  let trace = new TraceBuilder()
 ```
 
-## snippet.7101.fs
+### [snippet.7101.fs](snippet.7101.fs)
 ```
 /// <summary>Builds a new string whose characters are the results of applying the function <c>mapping</c>
 /// to each of the characters of the input string and concatenating the resulting
@@ -1774,7 +1774,7 @@ module Module1 =
 val collect : (char -> string) -> string -> string
 ```
 
-## snippet.7102.fs
+### [snippet.7102.fs](snippet.7102.fs)
 ```
 /// Creates a new string whose characters are the result of applying
 /// the function mapping to each of the characters of the input string
@@ -1782,7 +1782,7 @@ val collect : (char -> string) -> string -> string
 val collect : (char -> string) -> string -> string
 ```
 
-## snippet.7301.fs
+### [snippet.7301.fs](snippet.7301.fs)
 ```
 #if VERSION1
 let function1 x y =
@@ -1797,19 +1797,19 @@ let function1 x y =
 let result = function1 10 20
 ```
 
-## snippet.73011.fs
+### [snippet.73011.fs](snippet.73011.fs)
 ```
 let x = 10
 let result = lazy (x + 10)
 printfn "%d" (result.Force())
 ```
 
-## snippet.7302.fs
+### [snippet.7302.fs](snippet.7302.fs)
 ```
 let x = #if SYMBOL1 0 #else 1 #endif
 ```
 
-## snippet.7303.fs
+### [snippet.7303.fs](snippet.7303.fs)
 ```
 # 25
 #line 25
@@ -1818,7 +1818,7 @@ let x = #if SYMBOL1 0 #else 1 #endif
 # 25 @"C:\Projects\MyProject\MyProject\Script1"
 ```
 
-## snippet.7401.fs
+### [snippet.7401.fs](snippet.7401.fs)
 ```
 let printSourceLocation() =
     printfn "Line: %s" __LINE__
@@ -1827,7 +1827,7 @@ let printSourceLocation() =
 printSourceLocation()
 ```
 
-## snippet.8001.fs
+### [snippet.8001.fs](snippet.8001.fs)
 ```
 let task1 = async {
         let x = 10
@@ -1850,7 +1850,7 @@ let task2 = async {
 let results = Async.RunSynchronously (Async.Parallel [ task1; task2 ])
 ```
 
-## snippet.8003.fs
+### [snippet.8003.fs](snippet.8003.fs)
 ```
 open System.Net
 open Microsoft.FSharp.Control.WebExtensions
